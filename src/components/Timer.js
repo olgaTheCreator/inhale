@@ -1,4 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import "../../src/style.css";
+
+//import Button from "@mui/material/Button";
 
 const changeOfStep = (modulo, array) => {
   for (let i = 0; i <= 3; i++) {
@@ -17,22 +20,39 @@ const changeOfStep = (modulo, array) => {
 export const Timer = ({ breathingTechnique }) => {
   const { inhaleExhale } = breathingTechnique;
   const [seconds, setSeconds] = useState(0);
+  const [intervalId, setIntervalId] = useState(0);
+
   const modFromSec =
     seconds % inhaleExhale.reduce((acc, b) => acc + b.duration, 0);
-  console.log(modFromSec);
-  useEffect(() => {
+
+  const handleStartStopClick = () => {
     const initialUnixTime = Date.now();
-    const interval = setInterval(() => {
-      setSeconds((seconds) =>
-        Math.floor((Date.now() - initialUnixTime) / 1000)
-      );
+
+    if (intervalId) {
+      clearInterval(intervalId);
+      setIntervalId(0);
+      setSeconds(0);
+      return;
+    }
+
+    const newIntervalId = setInterval(() => {
+      setSeconds(() => Math.floor((Date.now() - initialUnixTime) / 1000));
     }, 1000);
-    return () => clearInterval(interval);
-  }, []);
+    setIntervalId(newIntervalId);
+  };
 
   return (
     <div>
-      {seconds}
+      <button
+        id="circle"
+        //variant="contained"
+        onClick={handleStartStopClick}
+      >
+        {intervalId ? "Stop" : "Start"}
+      </button>
+      <br></br>
+      <br></br>
+      {seconds}s
       <br />
       <br />
       {changeOfStep(modFromSec, inhaleExhale)}
