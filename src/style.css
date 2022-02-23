@@ -7,10 +7,10 @@ body {
 .container {
   display: grid;
   grid-template-columns: repeat(4, [col] 1fr);
-  grid-template-rows: repeat(5, [row] 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  height: 100vh;
+  grid-template-rows: [row] 20% 20% 40% 10% 10%;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  height: 70vh;
 }
 
 .area1 {
@@ -21,14 +21,14 @@ body {
   grid-area: 3 / 1 / 5 / 5;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 25% 25% 25% 25%;
+  grid-template-rows: 20% 20% 35% 25%;
 }
 
 .area3 {
   grid-area: 5 / 1 / 6 / 5;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 25% 25% 25% 25%;
+  grid-template-rows: 25% 25% 25%;
 }
 
 .circle {

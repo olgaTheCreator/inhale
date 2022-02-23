@@ -1,0 +1,50 @@
+.navContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 25vh;
+}
+.navContainer p {
+  font-size: small;
+}
+button {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: larger;
+  border: none;
+}
+.button1 {
+  grid-column: 1/ 2;
+  grid-row: 2 / 3;
+}
+
+.button2 {
+  grid-column: 2/ 3;
+  grid-row: 2 / 3;
+}
+
+.button3 {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+
+.button4 {
+  grid-column: 4/ 5;
+  grid-row: 2 / 3;
+}
+.button1 button {
+  background-color: aquamarine;
+}
+
+.button2 button {
+  background-color: purple;
+}
+
+.button3 button {
+  background-color: red;
+}
+
+.button4 button {
+  background-color: yellow;
+}
