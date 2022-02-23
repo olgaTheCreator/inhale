@@ -1,18 +1,11 @@
 import React, { useState } from "react";
 import "../../src/style.css";
 
-//import Button from "@mui/material/Button";
-
 const changeOfStep = (modulo, array) => {
   for (let i = 0; i <= 3; i++) {
     const { duration, step } = array[i];
     if (modulo < duration) {
-      return (
-        <>
-          <div>{duration - modulo}</div>
-          <div>{step}</div>
-        </>
-      );
+      return { duration: duration - modulo, currentStep: step };
     } else modulo = modulo - duration;
   }
 };
@@ -42,20 +35,33 @@ export const Timer = ({ breathingTechnique }) => {
   };
 
   return (
-    <div>
-      <button
-        id="circle"
-        //variant="contained"
-        onClick={handleStartStopClick}
-      >
-        {intervalId ? "Stop" : "Start"}
-      </button>
-      <br></br>
-      <br></br>
-      {seconds}s
-      <br />
-      <br />
-      {changeOfStep(modFromSec, inhaleExhale)}
+    <div className="container">
+      <div className="area1">
+        {seconds}s<br />
+      </div>
+
+      <div className="area2">
+        <div className="circle" onClick={handleStartStopClick}>
+          <br />
+          <br />
+          {intervalId ? (
+            <div id="stop-button">
+              STOP
+              <br />
+              {changeOfStep(modFromSec, inhaleExhale).duration}
+            </div>
+          ) : (
+            <div id="play-button"></div>
+          )}
+          <br />
+          <br />
+        </div>
+      </div>
+      <div className="area3">
+        <div className="step-text">
+          {changeOfStep(modFromSec, inhaleExhale).currentStep}
+        </div>
+      </div>
     </div>
   );
 };
