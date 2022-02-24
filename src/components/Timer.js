@@ -39,7 +39,6 @@ export const Timer = ({ chosenTechnique }) => {
       <div className="area1">
         {seconds}s<br />
       </div>
-
       <div className="area2">
         <div className="circle" onClick={handleStartStopClick}>
           <br />
@@ -58,9 +57,13 @@ export const Timer = ({ chosenTechnique }) => {
         </div>
       </div>
       <div className="area3">
-        <div className="step-text">
-          {changeOfStep(modFromSec, inhaleExhale).currentStep}
-        </div>
+        {intervalId ? (
+          <div className="step-text">
+            {changeOfStep(modFromSec, inhaleExhale).currentStep}
+          </div>
+        ) : (
+          <div></div>
+        )}
       </div>
     </div>
   );

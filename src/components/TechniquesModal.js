@@ -12,18 +12,16 @@ export const ChoosinTechniqueModal = ({ setIsOpen, setTechnique }) => {
     >
       <div className="centered">
         <div className="modal">
-          {breathingTechniques.map((a, index) => {
-            return (
-              <div
-                key={a.id}
-                onClick={() => (
-                  setTechnique(breathingTechniques[index]), setIsOpen(false)
-                )}
-              >
-                {a.name}
-              </div>
-            );
-          })}
+          {breathingTechniques.map((a, index) => (
+            <div
+              key={a.id}
+              onClick={() => (
+                setTechnique(breathingTechniques[index]), setIsOpen(false)
+              )}
+            >
+              {a.name}
+            </div>
+          ))}
         </div>
       </div>
     </div>
