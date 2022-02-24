@@ -1,64 +1,52 @@
-body {
-  background: #8ea8a0;
-  font-size: x-large;
-  text-align: center;
-}
-
-.container {
+.app-container {
   display: grid;
-  grid-template-columns: repeat(4, [col] 1fr);
-  grid-template-rows: [row] 20% 20% 40% 10% 10%;
-  grid-column-gap: 5px;
-  grid-row-gap: 5px;
-  height: 70vh;
+  grid-template-columns: 100%;
+  grid-template-rows: [row] 4vh 6vh 16vh 46vh 9vh 13vh 4vh;
+  grid-row-gap: 0px;
+  height: 100%;
+  padding: 2px;
+  margin: 0;
 }
 
-.area1 {
-  grid-area: 1 / 1 / 3 / 5;
+.upper-line {
+  grid-row: 1 / 2;
+  position: relative;
+  align-self: end;
 }
-
-.area2 {
-  grid-area: 3 / 1 / 5 / 5;
+.upper-line-draw {
+  border-bottom: 3px solid #e8e1d4;
+  width: 100%;
+}
+.menu-icon {
+  grid-row: 2 / 3;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 20% 20% 35% 25%;
 }
 
-.area3 {
-  grid-area: 5 / 1 / 6 / 5;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 25% 25% 25%;
-}
-
-.circle {
-  border-radius: 50%;
-  width: 295px;
-  height: 295px;
-  border: 15px solid #e8e1d4;
-  background: #8ea8a0;
-  transform: translate(-50%, -50%);
-  grid-column: 3/ 5;
+.free-space1 {
   grid-row: 3 / 4;
+  display: grid;
 }
 
-.step-text {
-  grid-column: 2/4;
-  grid-row: 1;
+.timer-container {
+  grid-row: 4 / 5;
+  display: grid;
 }
 
-#stop-button {
+.free-space2 {
+  grid-row: 5 / 6;
+  display: grid;
+}
+
+.menu-container {
+  grid-row: 6 / 7;
+  display: grid;
+}
+
+.lower-line {
+  grid-row: 7 / 8;
+  display: grid;
   position: relative;
-}
-
-#play-button {
-  background: url(../public/Polygon1.png) no-repeat center center;
-  position: relative;
-  top: 30%;
-  left: 55%;
-  background-size: contain;
-  width: 160px;
-  height: 160px;
-  border: none;
-  transform: translate(-50%, -50%);
+  align-self: start;
+  border-bottom: 3px solid #e8e1d4;
+  width: 100%;
 }

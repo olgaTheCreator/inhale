@@ -1,5 +1,5 @@
 import React from "react";
-import "./TechniquesModalStyle.css";
+import "./choosingTechniquesModalStyle.css";
 import { breathingTechniques } from "../data/breathingTechniques";
 
 export const ChoosinTechniqueModal = ({ setIsOpen, setTechnique }) => {

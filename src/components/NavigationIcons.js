@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./NavigationStyle.css";
-import { ChoosinTechniqueModal } from "./TechniquesModal";
+import "./navigationStyle.css";
+import { ChoosinTechniqueModal } from "./ChoosingTechniquesModal";
 
 export const NavigationIcons = ({ chosenTechnique, setTechnique }) => {
   const [isOpen, setIsOpen] = useState(false);

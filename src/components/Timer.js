@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../src/style.css";
+import "./timer.css";
 
 const changeOfStep = (modulo, array) => {
   for (let i = 0; i <= 3; i++) {
