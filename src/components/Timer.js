@@ -10,7 +10,8 @@ const changeOfStep = (modulo, array) => {
   }
 };
 
-export const Timer = ({ chosenTechnique, seconds, setSeconds, setIntervalId, intervalId }) => {
+export const Timer = ({ chosenTechnique, seconds, setSeconds, setIntervalId, intervalId, duration }) => {
+  console.log({duration});
   const { inhaleExhale } = chosenTechnique;
 
 

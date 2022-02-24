@@ -9,6 +9,7 @@ const App = () => {
   const [seconds, setSeconds] = useState(0);
   const [intervalId, setIntervalId] = useState(0);
   const [chosenTechnique, setTechnique] = useState(breathingTechniques[0]);
+  const [duration, setDuration] = useState(180)
   console.log(chosenTechnique);
   return (
     <div className="app-container">
@@ -18,7 +19,7 @@ const App = () => {
       <div className="free-space1">
       {seconds}s<br />{chosenTechnique.name}</div>
       <div className="timer-container">
-        <Timer chosenTechnique={chosenTechnique} seconds={seconds} setSeconds={setSeconds} intervalId={intervalId} setIntervalId={setIntervalId} />
+        <Timer chosenTechnique={chosenTechnique} seconds={seconds} setSeconds={setSeconds} intervalId={intervalId} setIntervalId={setIntervalId} duration={duration} />
       </div>
       <div className="free-space2"></div>
       <div className="menu-container">
@@ -28,6 +29,9 @@ const App = () => {
           intervalId= {intervalId}
           setIntervalId={setIntervalId}
           setSeconds={setSeconds}
+          duration={duration}
+          setDuration={setDuration}
+
         />
       </div>
       <div className="lower-line"></div>

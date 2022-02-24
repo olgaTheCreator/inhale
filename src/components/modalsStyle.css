@@ -11,17 +11,32 @@
 
 .centered {
   position: fixed;
-  top: 55%;
+  top: 71vh;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .modal {
-  width: 330px;
-  height: 450px;
+  width: 100vw;
+  height: 50vh;
   background: #e8e1d4;
   color: rgb(22, 22, 22);
-  border-radius: 15px;
+  border-radius: 15px 15px 0px 0px;
   z-index: 10;
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
+}
+
+.modal button {
+  background: #8EA8A0;
+  display: inline-block;
+  border-radius: 15px;
+  width: fit-content;
+}
+
+.durations-list {
+  height: 60%;
+  overflow-y: scroll;
+}
+.durations-list li {
+  list-style: none;
 }

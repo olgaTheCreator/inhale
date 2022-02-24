@@ -1,14 +1,14 @@
 import React from "react";
-import "./choosingTechniquesModalStyle.css";
+import "./modalsStyle.css";
 import { breathingTechniques } from "../data/breathingTechniques";
 
-export const ChoosinTechniqueModal = ({ setIsOpen, setTechnique, intervalId, setIntervalId, setSeconds }) => {
+export const ChoosinTechniqueModal = ({ setTechniquesOpen, setTechnique, intervalId, setIntervalId, setSeconds }) => {
   return (
     <div
       className="darkBG"
       onClick={() => {
         console.log({intervalId})
-        setIsOpen(false);
+        setTechniquesOpen(false);
       }}
     >
       <div className="centered">
@@ -22,7 +22,7 @@ export const ChoosinTechniqueModal = ({ setIsOpen, setTechnique, intervalId, set
                   setIntervalId(0);
                   setSeconds(0);
                 }
-                setTechnique(breathingTechniques[index]), setIsOpen(false)
+                setTechnique(breathingTechniques[index]), setTechniquesOpen(false)
               }}
             >
               {a.name}
