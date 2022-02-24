@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./navigationStyle.css";
 import { ChoosinTechniqueModal } from "./ChoosingTechniquesModal";
 
-export const NavigationIcons = ({ chosenTechnique, setTechnique }) => {
+export const NavigationIcons = ({ chosenTechnique, setTechnique, intervalId, setIntervalId, setSeconds }) => {
   const [isOpen, setIsOpen] = useState(false);
   console.log({ isOpen });
   return (
@@ -34,6 +34,9 @@ export const NavigationIcons = ({ chosenTechnique, setTechnique }) => {
           setIsOpen={setIsOpen}
           chosenTechnique={chosenTechnique}
           setTechnique={setTechnique}
+          intervalId= {intervalId}
+          setIntervalId={setIntervalId}
+          setSeconds={setSeconds}
         />
       )}
     </div>

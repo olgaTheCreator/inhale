@@ -2,11 +2,12 @@ import React from "react";
 import "./choosingTechniquesModalStyle.css";
 import { breathingTechniques } from "../data/breathingTechniques";
 
-export const ChoosinTechniqueModal = ({ setIsOpen, setTechnique }) => {
+export const ChoosinTechniqueModal = ({ setIsOpen, setTechnique, intervalId, setIntervalId, setSeconds }) => {
   return (
     <div
       className="darkBG"
       onClick={() => {
+        console.log({intervalId})
         setIsOpen(false);
       }}
     >
@@ -15,9 +16,14 @@ export const ChoosinTechniqueModal = ({ setIsOpen, setTechnique }) => {
           {breathingTechniques.map((a, index) => (
             <div
               key={a.id}
-              onClick={() => (
+              onClick={() => { 
+                if (intervalId) {
+                  clearInterval(intervalId);
+                  setIntervalId(0);
+                  setSeconds(0);
+                }
                 setTechnique(breathingTechniques[index]), setIsOpen(false)
-              )}
+              }}
             >
               {a.name}
             </div>

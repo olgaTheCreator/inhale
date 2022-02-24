@@ -1,17 +1,24 @@
+body {
+  background: #6ea8a0;
+  font-size: x-large;
+  text-align: center;
+  margin: 0px;
+}
 .app-container {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: [row] 4vh 6vh 16vh 46vh 9vh 13vh 4vh;
+  grid-template-rows: [row] 4vh 6vh 16vh 48vh 9vh 13vh 4vh;
   grid-row-gap: 0px;
   height: 100%;
-  padding: 2px;
+  padding: 0px;
   margin: 0;
 }
 
 .upper-line {
-  grid-row: 1 / 2;
-  position: relative;
+  display: grid;
   align-self: end;
+  border-bottom: 3px solid #e8e1d4;
+  width: 100%;
 }
 .upper-line-draw {
   border-bottom: 3px solid #e8e1d4;

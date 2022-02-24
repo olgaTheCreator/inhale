@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./timer.css";
 
 const changeOfStep = (modulo, array) => {
@@ -10,10 +10,9 @@ const changeOfStep = (modulo, array) => {
   }
 };
 
-export const Timer = ({ chosenTechnique }) => {
+export const Timer = ({ chosenTechnique, seconds, setSeconds, setIntervalId, intervalId }) => {
   const { inhaleExhale } = chosenTechnique;
-  const [seconds, setSeconds] = useState(0);
-  const [intervalId, setIntervalId] = useState(0);
+
 
   const modFromSec =
     seconds % inhaleExhale.reduce((acc, b) => acc + b.duration, 0);
@@ -37,7 +36,6 @@ export const Timer = ({ chosenTechnique }) => {
   return (
     <div className="container">
       <div className="area1">
-        {seconds}s<br />
       </div>
       <div className="area2">
         <div className="circle" onClick={handleStartStopClick}>
@@ -48,6 +46,14 @@ export const Timer = ({ chosenTechnique }) => {
               STOP
               <br />
               {changeOfStep(modFromSec, inhaleExhale).duration}
+              <br />
+              {intervalId ? (
+          <div className="step-text">
+            {changeOfStep(modFromSec, inhaleExhale).currentStep}
+          </div>
+        ) : (
+          <div></div>
+        )}
             </div>
           ) : (
             <div id="play-button"></div>
@@ -57,13 +63,6 @@ export const Timer = ({ chosenTechnique }) => {
         </div>
       </div>
       <div className="area3">
-        {intervalId ? (
-          <div className="step-text">
-            {changeOfStep(modFromSec, inhaleExhale).currentStep}
-          </div>
-        ) : (
-          <div></div>
-        )}
       </div>
     </div>
   );
