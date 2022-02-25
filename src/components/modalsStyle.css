@@ -27,7 +27,7 @@
 }
 
 .modal button {
-  background: #8EA8A0;
+  background: #8ea8a0;
   display: inline-block;
   border-radius: 15px;
   width: fit-content;
@@ -36,7 +36,14 @@
 .durations-list {
   height: 60%;
   overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
+
+.durations-list::-webkit-scrollbar {
+  display: none;
+}
+
 .durations-list li {
   list-style: none;
 }

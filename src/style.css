@@ -1,8 +1,10 @@
 body {
-  background: #8EA8A0;
+  background: #8ea8a0;
   font-size: x-large;
   text-align: center;
   margin: 0px;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
 }
 .app-container {
   display: grid;
