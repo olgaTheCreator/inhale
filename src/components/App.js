@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { breathingTechniques } from "../data/breathingTechniques";
 import { Timer } from "./Timer";
 import { NavigationIcons } from "./NavigationIcons";
-import "../style.css";
 import { AppWrapper } from "./AppWrapper";
+import { MenuIcon } from "./MenuIcon";
+import "../style.css";
 
 const App = () => {
   const [seconds, setSeconds] = useState(0);
@@ -14,7 +15,9 @@ const App = () => {
   return (
     <AppWrapper>
       <div className="upper-line"></div>
-      <div className="menu-icon"></div>
+      <div className="menu-icon">
+        <MenuIcon />
+      </div>
       <div className="free-space1">
         {seconds}s<br />
         {chosenTechnique.name}

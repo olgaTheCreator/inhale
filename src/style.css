@@ -37,7 +37,8 @@ body {
 }
 .menu-icon {
   grid-row: 2 / 3;
-  display: grid;
+  justify-self: end;
+  padding: 10px;
 }
 
 .free-space1 {
