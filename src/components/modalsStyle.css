@@ -1,7 +1,7 @@
 .darkBG {
   background-color: rgba(0, 0, 0, 0.4);
   width: 100vw;
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   z-index: 0;
   top: 50%;
   left: 50%;
@@ -11,14 +11,14 @@
 
 .centered {
   position: fixed;
-  top: 71vh;
+  top: calc(var(--vh, 1vh) * 71);
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .modal {
   width: 100vw;
-  height: 50vh;
+  height: calc(var(--vh, 1vh) * 50);
   background: #e8e1d4;
   color: rgb(22, 22, 22);
   border-radius: 15px 15px 0px 0px;

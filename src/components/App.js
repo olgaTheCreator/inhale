@@ -3,19 +3,16 @@ import { breathingTechniques } from "../data/breathingTechniques";
 import { Timer } from "./Timer";
 import { NavigationIcons } from "./NavigationIcons";
 import "../style.css";
-import { CorrectingViewport } from "../utils/CorrectingViewport";
+import { AppWrapper } from "./AppWrapper";
 
 const App = () => {
-  // console.log(calm.inhaleExhale);
   const [seconds, setSeconds] = useState(0);
   const [intervalId, setIntervalId] = useState(0);
   const [chosenTechnique, setTechnique] = useState(breathingTechniques[0]);
   const [duration, setDuration] = useState(180);
-  console.log(chosenTechnique);
 
   return (
-    <div className="app-container">
-      <CorrectingViewport />
+    <AppWrapper>
       <div className="upper-line"></div>
       <div className="menu-icon"></div>
       <div className="free-space1">
@@ -45,8 +42,7 @@ const App = () => {
         />
       </div>
       <div className="lower-line"></div>
-    </div>
+    </AppWrapper>
   );
 };
-
 export default App;

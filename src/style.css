@@ -6,12 +6,21 @@ body {
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
 }
+
+.external-container {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+}
 .app-container {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: [row] 4vh 6vh 16vh 48vh 9vh 13vh 4vh;
+  grid-template-rows:
+    [row]
+    calc(4 * var(--vh, vh)) calc(6 * var(--vh, vh)) calc(16 * var(--vh, vh))
+    calc(48 * var(--vh, vh))
+    calc(9 * var(--vh, vh)) calc(13 * var(--vh, vh)) calc(4 * var(--vh, vh));
   grid-row-gap: 0px;
-  height: 100%;
+  height: calc(var(--vh, 1vh) * 100);
   padding: 0px;
   margin: 0;
 }
@@ -19,11 +28,11 @@ body {
 .upper-line {
   display: grid;
   align-self: end;
-  border-bottom: 3px solid #e8e1d4;
+  border-bottom: calc(0.45 * var(--vh, vh)) solid #e8e1d4;
   width: 100%;
 }
 .upper-line-draw {
-  border-bottom: 3px solid #e8e1d4;
+  border-bottom: calc(0.35 * var(--vh, vh)) solid #e8e1d4;
   width: 100%;
 }
 .menu-icon {
@@ -56,6 +65,6 @@ body {
   display: grid;
   position: relative;
   align-self: start;
-  border-bottom: 3px solid #e8e1d4;
+  border-bottom: calc(0.45 * var(--vh, vh)) solid #e8e1d4;
   width: 100%;
 }
