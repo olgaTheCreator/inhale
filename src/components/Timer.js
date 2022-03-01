@@ -10,10 +10,16 @@ const changeOfStep = (modulo, array) => {
   }
 };
 
-export const Timer = ({ chosenTechnique, seconds, setSeconds, setIntervalId, intervalId, duration }) => {
-  console.log({duration});
+export const Timer = ({
+  chosenTechnique,
+  seconds,
+  setSeconds,
+  setIntervalId,
+  intervalId,
+  durationOfSession,
+}) => {
+  console.log({ durationOfSession });
   const { inhaleExhale } = chosenTechnique;
-
 
   const modFromSec =
     seconds % inhaleExhale.reduce((acc, b) => acc + b.duration, 0);
@@ -36,8 +42,7 @@ export const Timer = ({ chosenTechnique, seconds, setSeconds, setIntervalId, int
 
   return (
     <div className="container">
-      <div className="area1">
-      </div>
+      <div className="area1"></div>
       <div className="area2">
         <div className="circle" onClick={handleStartStopClick}>
           <br />
@@ -49,12 +54,12 @@ export const Timer = ({ chosenTechnique, seconds, setSeconds, setIntervalId, int
               {changeOfStep(modFromSec, inhaleExhale).duration}
               <br />
               {intervalId ? (
-          <div className="step-text">
-            {changeOfStep(modFromSec, inhaleExhale).currentStep}
-          </div>
-        ) : (
-          <div></div>
-        )}
+                <div className="step-text">
+                  {changeOfStep(modFromSec, inhaleExhale).currentStep}
+                </div>
+              ) : (
+                <div></div>
+              )}
             </div>
           ) : (
             <div id="play-button"></div>
@@ -63,8 +68,7 @@ export const Timer = ({ chosenTechnique, seconds, setSeconds, setIntervalId, int
           <br />
         </div>
       </div>
-      <div className="area3">
-      </div>
+      <div className="area3"></div>
     </div>
   );
 };

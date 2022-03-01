@@ -3,7 +3,15 @@ import "./navigationStyle.css";
 import { ChoosinTechniqueModal } from "./ChoosingTechniquesModal";
 import { TimeModal } from "./TimeModal";
 
-export const NavigationIcons = ({ chosenTechnique, setTechnique, intervalId, setIntervalId, setSeconds, setDuration }) => {
+export const NavigationIcons = ({
+  chosenTechnique,
+  setTechnique,
+  intervalId,
+  setIntervalId,
+  setSeconds,
+  durationOfSession,
+  setDuration,
+}) => {
   const [techniquesAreOpen, setTechniquesOpen] = useState(false);
   const [timeIsOpen, setTimeOpen] = useState(false);
   console.log({ techniquesAreOpen });
@@ -17,10 +25,13 @@ export const NavigationIcons = ({ chosenTechnique, setTechnique, intervalId, set
         <button>S</button>
         <p>sound</p>
       </div>
-      <div className="button3"  onClick={() => {
+      <div
+        className="button3"
+        onClick={() => {
           console.log({ timeIsOpen }, "wow");
           setTimeOpen(true);
-        }}>
+        }}
+      >
         <button>T</button>
         <p>time</p>
       </div>
@@ -36,18 +47,19 @@ export const NavigationIcons = ({ chosenTechnique, setTechnique, intervalId, set
       </div>
       {techniquesAreOpen && (
         <ChoosinTechniqueModal
-        setTechniquesOpen={setTechniquesOpen}
+          setTechniquesOpen={setTechniquesOpen}
           chosenTechnique={chosenTechnique}
           setTechnique={setTechnique}
-          intervalId= {intervalId}
+          intervalId={intervalId}
           setIntervalId={setIntervalId}
           setSeconds={setSeconds}
         />
       )}
       {timeIsOpen && (
         <TimeModal
-        setTimeOpen={setTimeOpen}
-        setDuration={setDuration}
+          setTimeOpen={setTimeOpen}
+          durationOfSession={durationOfSession}
+          setDuration={setDuration}
         />
       )}
     </div>

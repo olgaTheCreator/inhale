@@ -16,8 +16,8 @@ body {
   grid-template-columns: 100%;
   grid-template-rows:
     [row]
-    calc(4 * var(--vh, vh)) calc(6 * var(--vh, vh)) calc(16 * var(--vh, vh))
-    calc(48 * var(--vh, vh))
+    calc(4 * var(--vh, vh)) calc(6 * var(--vh, vh)) calc(24 * var(--vh, vh))
+    calc(40 * var(--vh, vh))
     calc(9 * var(--vh, vh)) calc(13 * var(--vh, vh)) calc(4 * var(--vh, vh));
   grid-row-gap: 0px;
   height: calc(var(--vh, 1vh) * 100);
@@ -44,6 +44,8 @@ body {
 .free-space1 {
   grid-row: 3 / 4;
   display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 50% 50%;
 }
 
 .timer-container {

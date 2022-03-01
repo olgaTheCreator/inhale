@@ -1,37 +1,33 @@
-import React from "react";
-import "./modalsStyle.css";
+import React, { useEffect } from "react";
+import "./timeModalStyle.css";
 
-export const TimeModal = ({ setTimeOpen, setDuration }) => {
+export const TimeModal = ({ setTimeOpen, durationOfSession, setDuration }) => {
+  useEffect(() => {
+    const ele = document.querySelector(".buble");
+    if (ele) {
+      ele.style.bottom = `${Number(durationOfSession)}px`;
+    }
+  });
   return (
-    <div
-      className="darkBG"
-      onClick={() => {
-        setTimeOpen(false);
-      }}
-    >
+    <div className="darkBG">
       <div className="centered">
-        <div className="modal">
-          <div className="durations-list">
-          <ul>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-          <li>6</li>
-          <li>7</li>
-          <li>8</li>
-          <li>9</li>
-          <li>10</li>
-          <li>11</li>
-          <li>12</li>
-          <li>13</li>
-          <li>14</li>
-          <li>15</li></ul>
+        <div className="time-modal">
+          <div className="slider-parent">
+            <input
+              type="range"
+              min="1"
+              max="30"
+              value={durationOfSession}
+              onChange={({ target: { value: radius } }) =>
+                setDuration(Number(radius))
+              }
+            />
           </div>
-          <button onClick={() => setDuration(5)}>SET DURATION</button>
+          <div className="buble">{durationOfSession}</div>
+          <div>
+            <button onClick={() => setTimeOpen(false)}>SET DURATION</button>
+          </div>
         </div>
-        
       </div>
     </div>
   );

@@ -5,12 +5,13 @@ import { NavigationIcons } from "./NavigationIcons";
 import { AppWrapper } from "./AppWrapper";
 import { MenuIcon } from "./MenuIcon";
 import "../style.css";
+import { BeginSessionText } from "./BeginSessionText";
 
 const App = () => {
   const [seconds, setSeconds] = useState(0);
   const [intervalId, setIntervalId] = useState(0);
   const [chosenTechnique, setTechnique] = useState(breathingTechniques[0]);
-  const [duration, setDuration] = useState(180);
+  const [durationOfSession, setDuration] = useState(3);
 
   return (
     <AppWrapper>
@@ -19,8 +20,7 @@ const App = () => {
         <MenuIcon />
       </div>
       <div className="free-space1">
-        {seconds}s<br />
-        {chosenTechnique.name}
+        <BeginSessionText durationOfSession={durationOfSession} />
       </div>
       <div className="timer-container">
         <Timer
@@ -29,7 +29,7 @@ const App = () => {
           setSeconds={setSeconds}
           intervalId={intervalId}
           setIntervalId={setIntervalId}
-          duration={duration}
+          durationOfSession={durationOfSession}
         />
       </div>
       <div className="free-space2"></div>
@@ -40,8 +40,8 @@ const App = () => {
           intervalId={intervalId}
           setIntervalId={setIntervalId}
           setSeconds={setSeconds}
-          duration={duration}
           setDuration={setDuration}
+          durationOfSession={durationOfSession}
         />
       </div>
       <div className="lower-line"></div>
