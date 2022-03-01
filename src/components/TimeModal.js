@@ -18,9 +18,7 @@ export const TimeModal = ({ setTimeOpen, durationOfSession, setDuration }) => {
               min="1"
               max="30"
               value={durationOfSession}
-              onChange={({ target: { value: radius } }) =>
-                setDuration(Number(radius))
-              }
+              onChange={(e) => setDuration(Number(e.target.value))}
             />
           </div>
           <div className="buble">{durationOfSession}</div>
