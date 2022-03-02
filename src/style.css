@@ -5,6 +5,7 @@ body {
   margin: 0px;
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
+  color: #455a6e;
 }
 
 .external-container {
@@ -30,6 +31,7 @@ body {
   align-self: end;
   border-bottom: calc(0.45 * var(--vh, vh)) solid #e8e1d4;
   width: 100%;
+  z-index: 11;
 }
 .upper-line-draw {
   border-bottom: calc(0.35 * var(--vh, vh)) solid #e8e1d4;
@@ -39,6 +41,7 @@ body {
   grid-row: 2 / 3;
   justify-self: end;
   padding: 10px;
+  z-index: 12;
 }
 
 .free-space1 {
@@ -61,6 +64,7 @@ body {
 .menu-container {
   grid-row: 6 / 7;
   display: grid;
+  padding-top: 2%;
 }
 
 .lower-line {

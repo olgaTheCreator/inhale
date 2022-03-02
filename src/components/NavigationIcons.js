@@ -26,20 +26,20 @@ export const NavigationIcons = ({
         <p>sound</p>
       </div>
       <div
-        className="button3"
+        className={`button3 ${timeIsOpen ? "visible-button" : ""}`}
         onClick={() => {
-          console.log({ timeIsOpen }, "wow");
-          setTimeOpen(true);
+          timeIsOpen ? setTimeOpen(false) : setTimeOpen(true);
         }}
       >
         <button>T</button>
         <p>time</p>
       </div>
       <div
-        className="button4"
+        className={`button4 ${techniquesAreOpen ? "visible-button" : ""}`}
         onClick={() => {
-          console.log({ techniquesAreOpen }, "wow");
-          setTechniquesOpen(true);
+          techniquesAreOpen
+            ? setTechniquesOpen(false)
+            : setTechniquesOpen(true);
         }}
       >
         <button>T</button>
