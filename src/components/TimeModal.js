@@ -22,7 +22,7 @@ export const TimeModal = ({ setTimeOpen, durationOfSession, setDuration }) => {
             />
           </div>
           <div className="buble">{durationOfSession}</div>
-          <div>
+          <div className="set-duration-button">
             <button onClick={() => setTimeOpen(false)}>SET DURATION</button>
           </div>
         </div>
