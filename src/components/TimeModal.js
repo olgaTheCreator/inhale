@@ -1,13 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./timeModalStyle.css";
 
 export const TimeModal = ({ setTimeOpen, durationOfSession, setDuration }) => {
-  useEffect(() => {
-    const ele = document.querySelector(".buble");
-    if (ele) {
-      ele.style.bottom = `${Number(durationOfSession)}px`;
-    }
-  });
   return (
     <div className="darkBG">
       <div className="centered">
@@ -21,7 +15,22 @@ export const TimeModal = ({ setTimeOpen, durationOfSession, setDuration }) => {
               onChange={(e) => setDuration(Number(e.target.value))}
             />
           </div>
-          <div className="buble">{durationOfSession}</div>
+          <div
+            className="buble-number"
+            style={{
+              bottom: `calc((var(--vh, 1vh) * 1.045) + var(--vh, 1vh) * 1.045 * ${durationOfSession})`,
+            }}
+          >
+            {durationOfSession}
+          </div>
+          <div
+            className="buble-min"
+            style={{
+              bottom: `calc((var(--vh, 1vh) * 1.045) + var(--vh, 1vh) * 1.045 * ${durationOfSession})`,
+            }}
+          >
+            min
+          </div>
           <div className="set-duration-button">
             <button onClick={() => setTimeOpen(false)}>SET DURATION</button>
           </div>
