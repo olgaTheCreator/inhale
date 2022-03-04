@@ -11,6 +11,7 @@ export const TimeModal = ({ setTimeOpen, durationOfSession, setDuration }) => {
               type="range"
               min="1"
               max="30"
+              step="1"
               value={durationOfSession}
               onChange={(e) => setDuration(Number(e.target.value))}
             />

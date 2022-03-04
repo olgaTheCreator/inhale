@@ -55,9 +55,8 @@
   color: #e8e1d4;
 }
 
-input[type="range"] {
+/*input[type="range"] {
   width: 100%;
-  margin: 1.5px 0;
   background-color: transparent;
   -webkit-appearance: none;
 }
@@ -66,21 +65,20 @@ input[type="range"]:focus {
 }
 input[type="range"]::-webkit-slider-runnable-track {
   background: #8ea8a0;
-  accent-color: #f55050;
   border: 5px solid #e8e1d4;
-  border-radius: 31.74px;
+  border-radius: 999px;
   width: 95%;
   height: calc(var(--vh, 1vh) * 2.5);
-  cursor: pointer;
+  cursor: grab;
+  text-align: center;
 }
 input[type="range"]::-webkit-slider-thumb {
-  margin-top: -6.5px;
-  width: calc(var(--vh, 1vh) * 2.8);
-  height: calc(var(--vh, 1vh) * 2.8);
+  width: calc(var(--vh, 1vh) * 3.5);
+  height: calc(var(--vh, 1vh) * 3.5);
   background: #8ea8a0;
-  border: 6px solid #e8e1d4;
-  border-radius: 31.74px;
-  cursor: pointer;
+  border: 5px solid #e8e1d4;
+  border-radius: 50%;
+  cursor: grab;
   -webkit-appearance: none;
 }
 input[type="range"]:focus::-webkit-slider-runnable-track {
@@ -89,10 +87,10 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 input[type="range"]::-moz-range-track {
   background: #8ea8a0;
   border: 5px solid #e8e1d4;
-  border-radius: 31.74px;
+  border-radius: 999px;
   width: 95%;
   height: calc(var(--vh, 1vh) * 1.5);
-  cursor: pointer;
+  cursor: grab;
 }
 input[type="range"]::-moz-range-thumb {
   width: calc(var(--vh, 1vh) * 1.8);
@@ -100,14 +98,15 @@ input[type="range"]::-moz-range-thumb {
   background: #8ea8a0;
   border: 5px solid #e8e1d4;
 
-  border-radius: 25px;
-  cursor: pointer;
+  border-radius: 50%;
+  cursor: grab;
 }
 
 input[type="range"]::-moz-range-progress {
   background: #e8e1d4;
-  height: calc(var(--vh, 1vh) * 1.6);
-  border-radius: 31.74px;
+  border: 5px solid #e8e1d4;
+  height: calc(var(--vh, 1vh) * 1.5);
+  border-radius: 999px;
 }
 input[type="range"]::-ms-track {
   background: transparent;
@@ -116,7 +115,7 @@ input[type="range"]::-ms-track {
   color: transparent;
   width: 95%;
   height: 20px;
-  cursor: pointer;
+  cursor: grab;
 }
 input[type="range"]::-ms-fill-lower {
   background: #e8e1d4;
@@ -136,11 +135,11 @@ input[type="range"]::-ms-thumb {
   border-radius: 25px;
   cursor: pointer;
   margin-top: 0px;
-  /*Needed to keep the Edge thumb centred*/
+
 }
 input[type="range"]:focus::-ms-fill-lower {
   background: #8ea8a0;
 }
 input[type="range"]:focus::-ms-fill-upper {
   background: #91aaa2;
-}
+}*/

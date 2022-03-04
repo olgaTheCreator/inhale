@@ -12,6 +12,21 @@ const App = () => {
   const [intervalId, setIntervalId] = useState(0);
   const [chosenTechnique, setTechnique] = useState(breathingTechniques[0]);
   const [durationOfSession, setDuration] = useState(3);
+  const [pause, setPause] = useState(false);
+
+  const handlePause = () => {
+    clearInterval(intervalId);
+    setIntervalId(0);
+    setPause(true);
+    return;
+  };
+  const handleStop = () => {
+    clearInterval(intervalId);
+    setIntervalId(0);
+    setSeconds(0);
+    setPause(false);
+    return;
+  };
 
   return (
     <AppWrapper>
@@ -20,7 +35,11 @@ const App = () => {
         <MenuIcon />
       </div>
       <div className="free-space1">
-        <BeginSessionText durationOfSession={durationOfSession} />
+        {intervalId || pause ? (
+          ""
+        ) : (
+          <BeginSessionText durationOfSession={durationOfSession} />
+        )}
       </div>
       <div className="timer-container">
         <Timer
@@ -30,6 +49,10 @@ const App = () => {
           intervalId={intervalId}
           setIntervalId={setIntervalId}
           durationOfSession={durationOfSession}
+          pause={pause}
+          setPause={setPause}
+          handleStop={handleStop}
+          handlePause={handlePause}
         />
       </div>
       <div className="free-space2"></div>
@@ -42,6 +65,9 @@ const App = () => {
           setSeconds={setSeconds}
           setDuration={setDuration}
           durationOfSession={durationOfSession}
+          setPause={setPause}
+          handlePause={handlePause}
+          handleStop={handleStop}
         />
       </div>
       <div className="lower-line"></div>

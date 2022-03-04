@@ -17,39 +17,45 @@ export const Timer = ({
   setIntervalId,
   intervalId,
   durationOfSession,
+  pause,
+  setPause,
+  handlePause,
 }) => {
-  console.log({ durationOfSession });
+  console.log({ durationOfSession }, { seconds }, { pause });
   const { inhaleExhale } = chosenTechnique;
 
   const modFromSec =
     seconds % inhaleExhale.reduce((acc, b) => acc + b.duration, 0);
 
-  const handleStartStopClick = () => {
+  const handleStart = () => {
     const initialUnixTime = Date.now();
 
-    if (intervalId) {
-      clearInterval(intervalId);
-      setIntervalId(0);
-      setSeconds(0);
-      return;
-    }
+    if (intervalId && !pause) {
+      handlePause();
+    } else {
+      const newIntervalId = setInterval(() => {
+        setSeconds(
+          () => seconds + Math.floor((Date.now() - initialUnixTime) / 1000)
+        );
+      }, 1000);
 
-    const newIntervalId = setInterval(() => {
-      setSeconds(() => Math.floor((Date.now() - initialUnixTime) / 1000));
-    }, 1000);
-    setIntervalId(newIntervalId);
+      setIntervalId(newIntervalId);
+      setPause(false);
+    }
+    console.log(initialUnixTime);
   };
 
+  console.log(modFromSec, intervalId, seconds);
   return (
     <div className="container">
       <div className="area1"></div>
       <div className="area2">
-        <div className="circle" onClick={handleStartStopClick}>
+        <div className="circle" onClick={handleStart}>
           <br />
           <br />
           {intervalId ? (
             <div id="stop-button">
-              STOP
+              PAUSE
               <br />
               {changeOfStep(modFromSec, inhaleExhale).duration}
               <br />

@@ -6,15 +6,12 @@ import { breathingTechniques } from "../data/breathingTechniques";
 export const ChoosinTechniqueModal = ({
   setTechniquesOpen,
   setTechnique,
-  intervalId,
-  setIntervalId,
-  setSeconds,
+  handleStop,
 }) => {
   return (
     <div
       className="darkBG"
       onClick={() => {
-        console.log({ intervalId });
         setTechniquesOpen(false);
       }}
     >
@@ -26,11 +23,7 @@ export const ChoosinTechniqueModal = ({
               <li
                 key={a.id}
                 onClick={() => {
-                  if (intervalId) {
-                    clearInterval(intervalId);
-                    setIntervalId(0);
-                    setSeconds(0);
-                  }
+                  handleStop();
                   setTechnique(breathingTechniques[index]),
                     setTechniquesOpen(false);
                 }}

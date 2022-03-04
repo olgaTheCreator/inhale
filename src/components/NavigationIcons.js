@@ -11,6 +11,8 @@ export const NavigationIcons = ({
   setSeconds,
   durationOfSession,
   setDuration,
+  handlePause,
+  handleStop,
 }) => {
   const [techniquesAreOpen, setTechniquesOpen] = useState(false);
   const [timeIsOpen, setTimeOpen] = useState(false);
@@ -28,6 +30,7 @@ export const NavigationIcons = ({
       <div
         className={`button3 ${timeIsOpen ? "visible-button" : ""}`}
         onClick={() => {
+          handlePause();
           timeIsOpen ? setTimeOpen(false) : setTimeOpen(true);
         }}
       >
@@ -40,6 +43,7 @@ export const NavigationIcons = ({
           techniquesAreOpen
             ? setTechniquesOpen(false)
             : setTechniquesOpen(true);
+          handlePause();
         }}
       >
         <button>T</button>
@@ -53,6 +57,7 @@ export const NavigationIcons = ({
           intervalId={intervalId}
           setIntervalId={setIntervalId}
           setSeconds={setSeconds}
+          handleStop={handleStop}
         />
       )}
       {timeIsOpen && (
