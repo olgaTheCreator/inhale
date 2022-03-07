@@ -42,7 +42,6 @@ export const Timer = ({
       setIntervalId(newIntervalId);
       setPause(false);
     }
-    console.log(initialUnixTime);
   };
 
   console.log(modFromSec, intervalId, seconds);

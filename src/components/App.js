@@ -6,6 +6,7 @@ import { AppWrapper } from "./AppWrapper";
 import { MenuIcon } from "./MenuIcon";
 import "../style.css";
 import { BeginSessionText } from "./BeginSessionText";
+import { ShowingTechniqueNameOnScreen } from "../ShowingTechniqueNameOnScreen";
 
 const App = () => {
   const [seconds, setSeconds] = useState(0);
@@ -35,6 +36,8 @@ const App = () => {
         <MenuIcon />
       </div>
       <div className="free-space1">
+        <ShowingTechniqueNameOnScreen chosenTechnique={chosenTechnique} />
+
         {intervalId || pause ? (
           ""
         ) : (
