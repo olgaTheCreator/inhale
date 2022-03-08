@@ -1,0 +1,23 @@
+.slider-wrapper {
+  grid-column: 2/3;
+}
+.slider-track {
+  background: #8ea8a0;
+  border: 5px solid #e8e1d4;
+  border-radius: 999px;
+  width: calc(var(--vh, 1vh) * 1.7);
+  height: calc(var(--vh, 1vh) * 20);
+  cursor: grab;
+}
+
+.slider-thumb {
+  position: relative;
+  bottom: 35px;
+  width: calc(var(--vh, 1vh) * 1.85);
+  height: calc(var(--vh, 1vh) * 1.85);
+  background: #8ea8a0;
+  border: 5px solid #e8e1d4;
+
+  border-radius: 50%;
+  cursor: grab;
+}

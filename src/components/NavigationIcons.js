@@ -65,6 +65,7 @@ export const NavigationIcons = ({
           setTimeOpen={setTimeOpen}
           durationOfSession={durationOfSession}
           setDuration={setDuration}
+          handleStop={handleStop}
         />
       )}
     </div>
