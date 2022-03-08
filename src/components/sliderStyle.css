@@ -1,20 +1,31 @@
 .slider-wrapper {
   grid-column: 2/3;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  background: #8ea8a0;
+  align-items: center;
+  justify-items: center;
 }
 .slider-track {
+  grid-area: 1/1;
+  position: absolute;
+  bottom: calc(var(--vh, 1vh) * 2);
   background: #8ea8a0;
   border: 5px solid #e8e1d4;
   border-radius: 999px;
   width: calc(var(--vh, 1vh) * 1.7);
-  height: calc(var(--vh, 1vh) * 20);
+  height: calc(var(--vh, 1vh) * 30);
   cursor: grab;
 }
 
 .slider-thumb {
-  position: relative;
-  bottom: 35px;
-  width: calc(var(--vh, 1vh) * 1.85);
-  height: calc(var(--vh, 1vh) * 1.85);
+  grid-area: 1/1;
+  position: absolute;
+  bottom: calc(var(--vh, 1vh) * 2);
+  width: calc(var(--vh, 1vh) * 1.7);
+  height: calc(var(--vh, 1vh) * 1.7);
   background: #8ea8a0;
   border: 5px solid #e8e1d4;
 
