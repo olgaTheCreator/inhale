@@ -1,13 +1,18 @@
 {
   "files": {
-    "main.css": "/inhale/static/css/main.b2b0d017.css",
-    "main.js": "/inhale/static/js/main.873b1209.js",
+    "main.css": "/inhale/static/css/main.46363bc2.css",
+    "main.js": "/inhale/static/js/main.160f3bc5.js",
+    "static/media/Vector_sound.svg": "/inhale/static/media/Vector_sound.dd0fd70528b4d55abf46.svg",
+    "static/media/Vector_vibrations.svg": "/inhale/static/media/Vector_vibrations.9744b5478bb35e2f43b1.svg",
+    "static/media/Vector_techniques.svg": "/inhale/static/media/Vector_techniques.a9bb5281d17a1889967e.svg",
+    "static/media/Vector_menu_on_top.svg": "/inhale/static/media/Vector_menu_on_top.f3851d515d75d18bd16c.svg",
     "index.html": "/inhale/index.html",
-    "main.b2b0d017.css.map": "/inhale/static/css/main.b2b0d017.css.map",
-    "main.873b1209.js.map": "/inhale/static/js/main.873b1209.js.map"
+    "static/media/Vector_time.svg": "/inhale/static/media/Vector_time.0e8553552b85bcfe4d28.svg",
+    "main.46363bc2.css.map": "/inhale/static/css/main.46363bc2.css.map",
+    "main.160f3bc5.js.map": "/inhale/static/js/main.160f3bc5.js.map"
   },
   "entrypoints": [
-    "static/css/main.b2b0d017.css",
-    "static/js/main.873b1209.js"
+    "static/css/main.46363bc2.css",
+    "static/js/main.160f3bc5.js"
   ]
 }
