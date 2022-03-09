@@ -10,8 +10,8 @@
 }
 .navContainer button {
   border-radius: 50%;
-  height: 40px;
-  width: 40px;
+  height: calc(6.6 * var(--vh, vh));
+  width: calc(6.6 * var(--vh, vh));
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-size: larger;
   color: #455a6e;
@@ -38,19 +38,23 @@
   grid-row: 1 / 2;
 }
 .button1 button {
-  background-color: aquamarine;
+  background: url(../assets/icons/Vector_vibrations.svg) no-repeat center center;
+  background-size: 100% 100%;
 }
 
 .button2 button {
-  background-color: purple;
+  background: url(../assets/icons/Vector_sound.svg) no-repeat center center;
+  background-size: 100% 100%;
 }
 
 .button3 button {
-  background-color: red;
+  background: url(../assets/icons/Vector_time.svg) no-repeat center center;
+  background-size: 100% 100%;
 }
 
 .button4 button {
-  background-color: yellow;
+  background: url(../assets/icons/Vector_techniques.svg) no-repeat center center;
+  background-size: 100% 100%;
 }
 
 .visible-button {

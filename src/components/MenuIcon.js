@@ -1,18 +1,19 @@
 import React, { useState } from "react";
-import DehazeRoundedIcon from "@mui/icons-material/DehazeRounded";
 import { MenuModal } from "./MenuModal";
+import "./menuIconStyle.css";
 
 export const MenuIcon = () => {
   const [menuIsOpen, setMenuOpen] = useState(false);
   return (
     <div>
       <div
+        className="menu-icon-container"
         onClick={() => {
           console.log({ menuIsOpen });
           setMenuOpen(true);
         }}
       >
-        <DehazeRoundedIcon fontSize="large" />
+        <button></button>
       </div>
       {menuIsOpen && <MenuModal setMenuOpen={setMenuOpen} />}
     </div>

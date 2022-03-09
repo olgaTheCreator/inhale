@@ -20,11 +20,11 @@ export const NavigationIcons = ({
   return (
     <div className="navContainer">
       <div className="button1">
-        <button>V</button>
+        <button></button>
         <p>vibrations</p>
       </div>
       <div className="button2">
-        <button>S</button>
+        <button></button>
         <p>sound</p>
       </div>
       <div
@@ -34,7 +34,7 @@ export const NavigationIcons = ({
           timeIsOpen ? setTimeOpen(false) : setTimeOpen(true);
         }}
       >
-        <button>T</button>
+        <button></button>
         <p>time</p>
       </div>
       <div
@@ -46,7 +46,7 @@ export const NavigationIcons = ({
           handlePause();
         }}
       >
-        <button>T</button>
+        <button></button>
         <p>techniques</p>
       </div>
       {techniquesAreOpen && (

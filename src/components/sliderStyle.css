@@ -17,12 +17,12 @@
   border-radius: 999px;
   width: calc(var(--vh, 1vh) * 1.7);
   height: calc(var(--vh, 1vh) * 30);
-  cursor: grab;
+  cursor: pointer;
 }
 
 .slider-thumb {
   grid-area: 1/1;
-  position: absolute;
+  position: fixed;
   bottom: calc(var(--vh, 1vh) * 2);
   width: calc(var(--vh, 1vh) * 1.7);
   height: calc(var(--vh, 1vh) * 1.7);
@@ -30,5 +30,5 @@
   border: 5px solid #e8e1d4;
 
   border-radius: 50%;
-  cursor: grab;
+  cursor: pointer;
 }
