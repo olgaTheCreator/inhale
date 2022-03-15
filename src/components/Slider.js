@@ -3,19 +3,19 @@ import "./sliderStyle.css";
 
 export const Slider = () => {
   const clientYref = useRef(0);
-  const [thumbPos, setThumbPos] = useState(80);
+  const [thumbPos, setThumbPos] = useState(`calc(var(--vh, 1vh) * 31.7)`);
 
   const handleMouseMove = (e) => {
     e.preventDefault();
-    clientYref.current = e.clientY;
+    clientYref.current = e.clientY/window.innerHeight;
     setThumbPos(clientYref.current);
-    console.log(e.clientY, thumbPos, clientYref.current);
+    console.log(e, e.target.clientHeight, thumbPos, clientYref.current);
   };
 
   const handleTouchMove = (e) => {
     const touch = e.targetTouches[0];
     setThumbPos(touch.clientY);
-    console.log(touch.clientY);
+    console.log(e);
   };
   return (
     <div className="slider-wrapper">
@@ -27,9 +27,9 @@ export const Slider = () => {
       ></div>
       <div
         className="slider-thumb"
-        onMouseMove={handleMouseMove}
+       // onMouseMove={handleMouseMove}
         style={{
-          top: `calc(${thumbPos}px)`,
+          bottom: `calc(var(--vh, 1vh) * ${thumbPos})`,
         }}
       ></div>
     </div>

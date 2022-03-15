@@ -11,7 +11,7 @@
 .slider-track {
   grid-area: 1/1;
   position: absolute;
-  bottom: calc(var(--vh, 1vh) * 2);
+
   background: #8ea8a0;
   border: 5px solid #e8e1d4;
   border-radius: 999px;
@@ -22,7 +22,7 @@
 
 .slider-thumb {
   grid-area: 1/1;
-  position: fixed;
+  position: absolute;
   bottom: calc(var(--vh, 1vh) * 2);
   width: calc(var(--vh, 1vh) * 1.7);
   height: calc(var(--vh, 1vh) * 1.7);
