@@ -7,14 +7,23 @@ export const Slider = () => {
 
   const handleMouseMove = (e) => {
     e.preventDefault();
-    clientYref.current = e.clientY/window.innerHeight;
+    (e.clientY - window.innerHeight/100* 35.8) < window.innerHeight/100* 3.308? 
+    clientYref.current = window.innerHeight/100* 3.30 
+    : (e.clientY - window.innerHeight/100* 35.8) > window.innerHeight/100* 31.85? 
+    clientYref.current = window.innerHeight/100* 31.85 
+    : clientYref.current = (e.clientY - window.innerHeight/100* 35.8);
     setThumbPos(clientYref.current);
-    console.log(e, e.target.clientHeight, thumbPos, clientYref.current);
+    console.log(e,e.clientY,window.innerHeight, e.target.clientHeight, thumbPos, clientYref.current);
   };
 
   const handleTouchMove = (e) => {
     const touch = e.targetTouches[0];
-    setThumbPos(touch.clientY);
+    (touch.clientY - window.innerHeight/100* 35.8) < window.innerHeight/100* 3.308? 
+    clientYref.current = window.innerHeight/100* 3.30 
+    : (touch.clientY - window.innerHeight/100* 35.8) > window.innerHeight/100* 31.85? 
+    clientYref.current = window.innerHeight/100* 31.85 
+    : clientYref.current = (touch.clientY - window.innerHeight/100* 35.8);
+    setThumbPos(clientYref.current);
     console.log(e);
   };
   return (
@@ -27,9 +36,8 @@ export const Slider = () => {
       ></div>
       <div
         className="slider-thumb"
-       // onMouseMove={handleMouseMove}
         style={{
-          bottom: `calc(var(--vh, 1vh) * ${thumbPos})`,
+          top: `${thumbPos}px`
         }}
       ></div>
     </div>
