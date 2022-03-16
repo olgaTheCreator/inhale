@@ -1,7 +1,7 @@
-import React, 
-{useState} from "react";
+import React, { useState } from "react";
 import "./timeModalStyle.css";
 import { Slider } from "./Slider";
+import { DurationAndPosition } from "../utils/DurationAndPosition.js";
 
 export const TimeModal = ({
   setTimeOpen,
@@ -9,27 +9,38 @@ export const TimeModal = ({
   setDuration,
   handleStop,
 }) => {
-  const [isSliding, setSliding] = useState(false)
+  const { durationToPosition } = DurationAndPosition;
+
+  const [isSliding, setSliding] = useState(false);
+  const [thumbPos, setThumbPos] = useState(
+    durationToPosition(durationOfSession)
+  );
   return (
     <div className="darkBG">
       <div className="centered">
-        <div className="time-modal"
-        onMouseUp={() => setSliding(false)}>
+        <div className="time-modal" onMouseUp={() => setSliding(false)}>
           <div className="slider-parent">
             <div
               className="buble-number"
               style={{
-                bottom: `calc((var(--vh, 1vh) * 1.045) + var(--vh, 1vh) * 1.045 * ${durationOfSession})`,
+                top: `${thumbPos}px`,
               }}
             >
               {durationOfSession}
             </div>
-            <Slider setDuration={setDuration} isSliding={isSliding} setSliding={setSliding} />
+            <Slider
+              durationOfSession={durationOfSession}
+              setDuration={setDuration}
+              isSliding={isSliding}
+              setSliding={setSliding}
+              thumbPos={thumbPos}
+              setThumbPos={setThumbPos}
+            />
 
             <div
               className="buble-min"
               style={{
-                bottom: `calc((var(--vh, 1vh) * 1.045) + var(--vh, 1vh) * 1.045 * ${durationOfSession})`,
+                top: `${thumbPos}px`,
               }}
             >
               min

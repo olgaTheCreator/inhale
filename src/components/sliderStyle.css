@@ -25,7 +25,7 @@
 .slider-thumb {
   grid-area: 1/1;
   position: absolute;
-  bottom: calc(var(--vh, 1vh) * 2);
+  bottom: calc(var(--vh, 1vh) * 2.9);
   width: calc(var(--vh, 1vh) * 1.7);
   height: calc(var(--vh, 1vh) * 1.7);
   background: #8ea8a0;
