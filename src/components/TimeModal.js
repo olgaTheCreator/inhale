@@ -1,4 +1,5 @@
-import React from "react";
+import React, 
+{useState} from "react";
 import "./timeModalStyle.css";
 import { Slider } from "./Slider";
 
@@ -8,10 +9,12 @@ export const TimeModal = ({
   setDuration,
   handleStop,
 }) => {
+  const [isSliding, setSliding] = useState(false)
   return (
     <div className="darkBG">
       <div className="centered">
-        <div className="time-modal">
+        <div className="time-modal"
+        onMouseUp={() => setSliding(false)}>
           <div className="slider-parent">
             <div
               className="buble-number"
@@ -21,7 +24,7 @@ export const TimeModal = ({
             >
               {durationOfSession}
             </div>
-            <Slider setDuration={setDuration} />
+            <Slider setDuration={setDuration} isSliding={isSliding} setSliding={setSliding} />
 
             <div
               className="buble-min"
