@@ -14,6 +14,15 @@ export const Slider = ({
 
   const clientYref = useRef(0);
 
+  const handleClick = (e) => {
+    clientYref.current = e.clientY - countVh * 35.8;
+    setThumbPos(clientYref.current);
+    setDuration(() => {
+      if (positionToDuration(clientYref.current) < 0) return 0;
+      else if (positionToDuration(clientYref.current) > 30) return 30;
+      else return positionToDuration(clientYref.current);
+    });
+  };
   const handleMouseDown = () => {
     setSliding(true);
   };
@@ -54,10 +63,7 @@ export const Slider = ({
       onTouchMove={handleTouchMove}
       onMouseUp={handleMouseUp}
     >
-      <div
-        className="slider-track"
-        onClick={(e) => console.log(e.clientX, e.clientY)}
-      ></div>
+      <div className="slider-track" onClick={handleClick}></div>
       <div
         className="slider-thumb"
         onMouseDown={handleMouseDown}
