@@ -15,13 +15,13 @@ export const Slider = ({
   const clientYref = useRef(0);
 
   const handleClick = (e) => {
-    clientYref.current = e.clientY - countVh * 35.8;
+    e.clientY - countVh * 35.8 < countVh * 3.308
+      ? (clientYref.current = countVh * thumbTopPosMin)
+      : e.clientY - countVh * 35.8 > countVh * thumbTopPosMax
+      ? (clientYref.current = countVh * thumbTopPosMax)
+      : (clientYref.current = e.clientY - countVh * 35.8);
     setThumbPos(clientYref.current);
-    setDuration(() => {
-      if (positionToDuration(clientYref.current) < 0) return 0;
-      else if (positionToDuration(clientYref.current) > 30) return 30;
-      else return positionToDuration(clientYref.current);
-    });
+    setDuration(positionToDuration(clientYref.current));
   };
   const handleMouseDown = () => {
     setSliding(true);
