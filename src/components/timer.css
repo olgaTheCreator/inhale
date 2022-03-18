@@ -30,7 +30,7 @@
   width: calc(30 * var(--vh, vh));
   height: calc(30 * var(--vh, vh));
   border: calc(1.7 * var(--vh, vh)) solid #e8e1d4;
-  background: #8ea8a0;
+  background: #e8e1d4;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
   grid-column: 2/ 4;
   grid-row: 2 / 4;
@@ -48,12 +48,27 @@
   position: relative;
 }
 
-#play-button {
-  background: url(../../public/Polygon1.png) no-repeat center center;
-  position: static;
-  text-align: center;
+.play-button {
+  background: url(../assets/icons/play.svg) no-repeat center center;
+  position: absolute;
+
   background-size: contain;
-  width: calc(18 * var(--vh, vh));
-  height: calc(18 * var(--vh, vh));
+  width: calc(22 * var(--vh, vh));
+  height: calc(22 * var(--vh, vh));
   border: none;
+  display: grid;
+  place-items: center;
+}
+
+.play-button p {
+  position: absolute;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20.8772px;
+
+  color: #faf8eb;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }

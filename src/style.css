@@ -29,7 +29,9 @@ body {
 .upper-line {
   display: grid;
   align-self: end;
-  border-bottom: calc(0.45 * var(--vh, vh)) solid #e8e1d4;
+  border-bottom: calc(0.8 * var(--vh, vh)) solid #e8e1d4;
+  box-shadow: 0px calc(0.3 * var(--vh, vh)) calc(0.3 * var(--vh, vh))
+    rgba(0, 0, 0, 0.25);
   width: 100%;
   z-index: 11;
 }
@@ -72,6 +74,8 @@ body {
   display: grid;
   position: relative;
   align-self: start;
-  border-bottom: calc(0.45 * var(--vh, vh)) solid #e8e1d4;
+  border-bottom: calc(0.8 * var(--vh, vh)) solid #e8e1d4;
+  box-shadow: 0px calc(0.3 * var(--vh, vh)) calc(0.3 * var(--vh, vh))
+    rgba(0, 0, 0, 0.25);
   width: 100%;
 }

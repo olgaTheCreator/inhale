@@ -34,6 +34,7 @@
 }
 
 .buble-number {
+  height: fit-content;
   position: relative;
   justify-self: end;
   grid-row: 1 / 2;
@@ -42,6 +43,7 @@
 }
 
 .buble-min {
+  height: fit-content;
   position: relative;
   justify-self: start;
   grid-row: 1 / 2;

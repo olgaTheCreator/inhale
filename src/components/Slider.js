@@ -1,17 +1,12 @@
 import React, { useRef } from "react";
 import "./sliderStyle.css";
-import { DurationAndPosition } from "../utils/DurationAndPosition.js";
+import {
+  thumbTopPosMax,
+  thumbTopPosMin,
+  countVh,
+} from "../utils/DurationAndPosition.js";
 
-export const Slider = ({
-  isSliding,
-  setSliding,
-  setDuration,
-  setThumbPos,
-  thumbPos,
-}) => {
-  const { positionToDuration, thumbTopPosMax, thumbTopPosMin, countVh } =
-    DurationAndPosition;
-
+export const Slider = ({ isSliding, setSliding, setThumbPos, thumbPos }) => {
   const clientYref = useRef(0);
 
   const handleClick = (e) => {
@@ -21,7 +16,6 @@ export const Slider = ({
       ? (clientYref.current = countVh * thumbTopPosMax)
       : (clientYref.current = e.clientY - countVh * 35.8);
     setThumbPos(clientYref.current);
-    setDuration(positionToDuration(clientYref.current));
   };
   const handleMouseDown = () => {
     setSliding(true);
@@ -36,25 +30,13 @@ export const Slider = ({
   const handleMouseMove = (e) => {
     if (isSliding) {
       e.preventDefault();
-      e.clientY - countVh * 35.8 < countVh * 3.308
-        ? (clientYref.current = countVh * thumbTopPosMin)
-        : e.clientY - countVh * 35.8 > countVh * thumbTopPosMax
-        ? (clientYref.current = countVh * thumbTopPosMax)
-        : (clientYref.current = e.clientY - countVh * 35.8);
-      setThumbPos(clientYref.current);
-      setDuration(positionToDuration(clientYref.current));
+      handleClick(e);
     }
   };
 
   const handleTouchMove = (e) => {
     const touch = e.targetTouches[0];
-    touch.clientY - countVh * 35.8 < countVh * 3.308
-      ? (clientYref.current = countVh * thumbTopPosMin)
-      : touch.clientY - countVh * 35.8 > countVh * thumbTopPosMax
-      ? (clientYref.current = countVh * thumbTopPosMax)
-      : (clientYref.current = touch.clientY - countVh * 35.8);
-    setThumbPos(clientYref.current);
-    setDuration(positionToDuration(clientYref.current));
+    handleClick(touch);
   };
   return (
     <div

@@ -7,7 +7,8 @@ const positionToDuration = (position) => {
     (1 -
       (position - thumbTopPosMin * countVh) /
         ((thumbTopPosMax - thumbTopPosMin) * countVh)) *
-      30
+      29 +
+      1
   );
 };
 const durationToPosition = (duration) => {
@@ -16,7 +17,7 @@ const durationToPosition = (duration) => {
     thumbTopPosMin * countVh
   );
 };
-export const DurationAndPosition = {
+export {
   positionToDuration,
   durationToPosition,
   thumbTopPosMax,

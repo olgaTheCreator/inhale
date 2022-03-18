@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import "./timeModalStyle.css";
 import { Slider } from "./Slider";
-import { DurationAndPosition } from "../utils/DurationAndPosition.js";
+import {
+  durationToPosition,
+  positionToDuration,
+} from "../utils/DurationAndPosition.js";
 
 export const TimeModal = ({
   setTimeOpen,
@@ -9,11 +12,9 @@ export const TimeModal = ({
   setDuration,
   handleStop,
 }) => {
-  const { durationToPosition } = DurationAndPosition;
-
   const [isSliding, setSliding] = useState(false);
   const [thumbPos, setThumbPos] = useState(
-    durationToPosition(durationOfSession)
+    durationToPosition(durationOfSession) + 6
   );
   return (
     <div className="darkBG">
@@ -26,11 +27,9 @@ export const TimeModal = ({
                 top: `${thumbPos}px`,
               }}
             >
-              {durationOfSession}
+              {positionToDuration(thumbPos)}
             </div>
             <Slider
-              durationOfSession={durationOfSession}
-              setDuration={setDuration}
               isSliding={isSliding}
               setSliding={setSliding}
               thumbPos={thumbPos}
@@ -50,6 +49,7 @@ export const TimeModal = ({
             <button
               onClick={() => {
                 setTimeOpen(false);
+                setDuration(positionToDuration(thumbPos));
                 handleStop();
               }}
             >
