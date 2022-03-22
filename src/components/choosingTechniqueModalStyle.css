@@ -1,8 +1,9 @@
 .modal {
   position: relative;
-  right: 10px;
-  grid-column: 2/3;
-  width: 70vw;
+  right: calc(2 * var(--vh, vh));
+  grid-column: 1/2;
+  justify-self: end;
+  width: 50%;
   height: 100%;
   background: #e8e1d4;
   color: #455a6e;

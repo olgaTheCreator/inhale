@@ -1,6 +1,6 @@
 .darkBG {
   background-color: #8ea8a0;
-  width: 100vw;
+  width: 100%;
   height: calc(var(--vh, 1vh) * 100);
   z-index: 0;
   top: 0;
@@ -22,7 +22,7 @@
   grid-column: 1/2;
   grid-row: 4/6;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: 100%;
 }
 
