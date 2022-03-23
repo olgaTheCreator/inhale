@@ -19,3 +19,14 @@
 p.technique-name {
   font-size: 18px;
 }
+
+.list-of-techniques {
+  text-align: center;
+  list-style-position: inside;
+  list-style-type: none;
+}
+li {
+  background: url(../assets/icons/Vector_ellipse_in_techniques.svg) no-repeat
+    left top;
+  vertical-align: middle;
+}

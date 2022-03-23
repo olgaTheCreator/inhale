@@ -18,7 +18,7 @@ export const ChoosinTechniqueModal = ({
       <div className="modal-name">techniques</div>
       <div className="centered">
         <div className="modal">
-          <ul>
+          <ul className="list-of-techniques">
             {breathingTechniques.map((a, index) => (
               <li
                 key={a.id}
@@ -28,7 +28,7 @@ export const ChoosinTechniqueModal = ({
                     setTechniquesOpen(false);
                 }}
               >
-                <p className="technique-name">{a.name}</p>
+                {a.name}
                 <p className="short-descriptiion">{a.shortDescription}</p>
               </li>
             ))}

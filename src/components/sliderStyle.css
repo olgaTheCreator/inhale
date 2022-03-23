@@ -17,6 +17,8 @@
 
   background: #8ea8a0;
   border: 5px solid #e8e1d4;
+  box-shadow: 0px calc(0.3 * var(--vh, vh)) calc(0.3 * var(--vh, vh))
+    rgba(0, 0, 0, 0.25);
   border-radius: 999px;
   width: calc(var(--vh, 1vh) * 1.7);
   height: calc(var(--vh, 1vh) * 30);
@@ -32,6 +34,8 @@
   height: calc(var(--vh, 1vh) * 1.7);
   background: #8ea8a0;
   border: 5px solid #e8e1d4;
+  box-shadow: 0px calc(0.3 * var(--vh, vh)) calc(0.3 * var(--vh, vh))
+    rgba(0, 0, 0, 0.25);
 
   border-radius: 50%;
   cursor: pointer;

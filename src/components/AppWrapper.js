@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../style.css";
+import { debounce } from "../utils/Debounce";
 
 export const AppWrapper = ({ children }) => {
   const [dimensions, setDimensions] = useState({
@@ -27,14 +28,3 @@ export const AppWrapper = ({ children }) => {
   console.log({ dimensions });
   return <div className="app-container"> {children} </div>;
 };
-
-function debounce(fn, ms) {
-  let timer;
-  return () => {
-    clearTimeout(timer);
-    timer = setTimeout(() => {
-      timer = null;
-      fn.apply(this, arguments);
-    }, ms);
-  };
-}

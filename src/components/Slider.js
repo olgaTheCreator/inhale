@@ -5,6 +5,7 @@ import {
   thumbTopPosMin,
   countVh,
 } from "../utils/DurationAndPosition.js";
+import { debounce } from "../utils/Debounce";
 
 export const Slider = ({ isSliding, setSliding, setThumbPos, thumbPos }) => {
   const clientYref = useRef(0);
@@ -15,7 +16,7 @@ export const Slider = ({ isSliding, setSliding, setThumbPos, thumbPos }) => {
       : e.clientY - countVh * 35.8 > countVh * thumbTopPosMax
       ? (clientYref.current = countVh * thumbTopPosMax)
       : (clientYref.current = e.clientY - countVh * 35.8);
-    setThumbPos(clientYref.current);
+    debounce(setThumbPos(clientYref.current), 100);
   };
   const handleMouseDown = () => {
     setSliding(true);
@@ -45,7 +46,27 @@ export const Slider = ({ isSliding, setSliding, setThumbPos, thumbPos }) => {
       onTouchMove={handleTouchMove}
       onMouseUp={handleMouseUp}
     >
-      <div className="slider-track" onClick={handleClick}></div>
+      <div
+        className="slider-track"
+        onClick={handleClick}
+        style={{
+          backgroundImage: `linear-gradient(to top, #e8e1d4,  #e8e1d4 ${Math.floor(
+            (1 -
+              (thumbPos - thumbTopPosMin * countVh) /
+                ((thumbTopPosMax - thumbTopPosMin) * countVh)) *
+              100
+          )}%,#8ea8a0 ${Math.floor(
+            (1 -
+              (thumbPos - thumbTopPosMin * countVh) /
+                ((thumbTopPosMax - thumbTopPosMin) * countVh)) *
+              100
+          )}%, #8ea8a0 ${Math.ceil(
+            ((thumbPos - thumbTopPosMin * countVh) /
+              ((thumbTopPosMax - thumbTopPosMin) * countVh)) *
+              100
+          )}%)`,
+        }}
+      ></div>
       <div
         className="slider-thumb"
         onMouseDown={handleMouseDown}
@@ -57,15 +78,3 @@ export const Slider = ({ isSliding, setSliding, setThumbPos, thumbPos }) => {
     </div>
   );
 };
-
-/*function debounce(fn, ms) {
-  let timer;
-  return () => {
-    clearTimeout(timer);
-    timer = setTimeout(() => {
-      timer = null;
-      fn.apply(this, arguments);
-    }, ms);
-  };
-}
-*/
