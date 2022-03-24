@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import "./navigationStyle.css";
 import { ChoosinTechniqueModal } from "./ChoosingTechniquesModal";
 import { TimeModal } from "./TimeModal";
-//import { vibrate } from "../utils/Vibration";
-import { noOp } from "../utils/NoOp";
 
 export const NavigationIcons = ({
   chosenTechnique,
@@ -15,19 +13,22 @@ export const NavigationIcons = ({
   setDuration,
   handlePause,
   handleStop,
-  //vibrations,
+  vibrations,
   setVibrations,
 }) => {
   const [techniquesAreOpen, setTechniquesOpen] = useState(false);
   const [timeIsOpen, setTimeOpen] = useState(false);
-  console.log({ techniquesAreOpen });
   return (
     <div className="navContainer">
-      <div className="button1">
+      <div
+        className="button1"
+        onClick={() => {
+          if (vibrations) setVibrations(false);
+          else setVibrations(true);
+        }}
+      >
         <button
-          onClick={() => {
-            setVibrations(() => noOp);
-          }}
+          className={vibrations ? "button1-vib" : "button1-novib"}
         ></button>
         <p>vibrations</p>
       </div>

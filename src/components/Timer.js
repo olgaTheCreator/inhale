@@ -1,5 +1,7 @@
 import React from "react";
 import "./timer.css";
+import { vibrate } from "../utils/Vibration";
+import { noOp } from "../utils/NoOp";
 
 export const Timer = ({
   chosenTechnique,
@@ -11,14 +13,14 @@ export const Timer = ({
   pause,
   setPause,
   handlePause,
-  //vibrations,
+  vibrations,
 }) => {
   const changeOfStep = (modulo, array) => {
     for (let i = 0; i <= 3; i++) {
       const { duration, step } = array[i];
       if (modulo < duration) {
         if (modulo === 0) {
-          navigator.vibrate(250);
+          vibrations ? vibrate() : noOp;
         }
         return { duration: duration - modulo, currentStep: step };
       } else {

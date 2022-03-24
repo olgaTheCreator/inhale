@@ -37,8 +37,13 @@
   grid-column: 4/ 5;
   grid-row: 1 / 2;
 }
-.button1 button {
+.button1-vib {
   background: url(../assets/icons/Vector_vibrations.svg) no-repeat center center;
+  background-size: 100% 100%;
+}
+.button1-novib {
+  background: url(../assets/icons/Vector_vibrations_crossedout.svg) no-repeat
+    center center;
   background-size: 100% 100%;
 }
 
