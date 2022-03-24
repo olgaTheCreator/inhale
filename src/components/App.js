@@ -7,6 +7,7 @@ import { MenuIcon } from "./MenuIcon";
 import "../style.css";
 import { BeginSessionText } from "./BeginSessionText";
 import { ShowingTechniqueNameOnScreen } from "./ShowingTechniqueNameOnScreen";
+import { vibrate } from "../utils/Vibration";
 
 const App = () => {
   const [seconds, setSeconds] = useState(0);
@@ -14,6 +15,8 @@ const App = () => {
   const [chosenTechnique, setTechnique] = useState(breathingTechniques[0]);
   const [durationOfSession, setDuration] = useState(3);
   const [pause, setPause] = useState(false);
+  const [vibrations, setVibrations] = useState(() => vibrate());
+  console.log(vibrations);
 
   const handlePause = () => {
     clearInterval(intervalId);
@@ -56,6 +59,7 @@ const App = () => {
           setPause={setPause}
           handleStop={handleStop}
           handlePause={handlePause}
+          vibrations={vibrations}
         />
       </div>
       <div className="free-space2"></div>
@@ -71,6 +75,8 @@ const App = () => {
           setPause={setPause}
           handlePause={handlePause}
           handleStop={handleStop}
+          vibrations={vibrations}
+          setVibrations={setVibrations}
         />
       </div>
       <div className="lower-line"></div>

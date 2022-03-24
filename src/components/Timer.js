@@ -1,27 +1,32 @@
 import React from "react";
 import "./timer.css";
 
-const changeOfStep = (modulo, array) => {
-  for (let i = 0; i <= 3; i++) {
-    const { duration, step } = array[i];
-    if (modulo < duration) {
-      return { duration: duration - modulo, currentStep: step };
-    } else modulo = modulo - duration;
-  }
-};
-
 export const Timer = ({
   chosenTechnique,
   seconds,
   setSeconds,
   setIntervalId,
   intervalId,
-  durationOfSession,
+  //durationOfSession,
   pause,
   setPause,
   handlePause,
+  //vibrations,
 }) => {
-  console.log({ durationOfSession }, { seconds }, { pause });
+  const changeOfStep = (modulo, array) => {
+    for (let i = 0; i <= 3; i++) {
+      const { duration, step } = array[i];
+      if (modulo < duration) {
+        if (modulo === 0) {
+          navigator.vibrate(250);
+        }
+        return { duration: duration - modulo, currentStep: step };
+      } else {
+        modulo = modulo - duration;
+      }
+    }
+  };
+
   const { inhaleExhale } = chosenTechnique;
 
   const modFromSec =
