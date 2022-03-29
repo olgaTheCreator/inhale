@@ -6,6 +6,7 @@ import { AppWrapper } from "./AppWrapper";
 import { MenuIcon } from "./MenuIcon";
 import "../style.css";
 import { BeginSessionText } from "./BeginSessionText";
+import { EndOfSessionText } from "./EndOfSessionText";
 import { ShowingTechniqueNameOnScreen } from "./ShowingTechniqueNameOnScreen";
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
   const [durationOfSession, setDuration] = useState(3);
   const [pause, setPause] = useState(false);
   const [vibrations, setVibrations] = useState(true);
+  const [sounds, setSounds] = useState(true);
 
   const handlePause = () => {
     clearInterval(intervalId);
@@ -30,6 +32,10 @@ const App = () => {
     return;
   };
 
+  if (seconds <= durationOfSession * 60) {
+    console.log(seconds);
+  } else handleStop();
+
   return (
     <AppWrapper>
       <div className="upper-line"></div>
@@ -39,7 +45,9 @@ const App = () => {
       <div className="free-space1">
         <ShowingTechniqueNameOnScreen chosenTechnique={chosenTechnique} />
 
-        {intervalId || pause ? (
+        {durationOfSession * 60 === seconds ? (
+          <EndOfSessionText />
+        ) : intervalId || pause ? (
           ""
         ) : (
           <BeginSessionText durationOfSession={durationOfSession} />
@@ -58,6 +66,7 @@ const App = () => {
           handleStop={handleStop}
           handlePause={handlePause}
           vibrations={vibrations}
+          sounds={sounds}
         />
       </div>
       <div className="free-space2"></div>
@@ -75,6 +84,8 @@ const App = () => {
           handleStop={handleStop}
           vibrations={vibrations}
           setVibrations={setVibrations}
+          sounds={sounds}
+          setSounds={setSounds}
         />
       </div>
       <div className="lower-line"></div>

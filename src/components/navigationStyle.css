@@ -47,8 +47,14 @@
   background-size: 100% 100%;
 }
 
-.button2 button {
+.button2-sound {
   background: url(../assets/icons/Vector_sound.svg) no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.button2-nosound {
+  background: url(../assets/icons/Vector_sound_crossed_out_.svg) no-repeat
+    center center;
   background-size: 100% 100%;
 }
 

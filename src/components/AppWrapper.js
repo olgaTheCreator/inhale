@@ -9,7 +9,7 @@ export const AppWrapper = ({ children }) => {
     vh: window.innerHeight * 0.01,
   });
   document.documentElement.style.setProperty("--vh", `${dimensions.vh}px`);
-  console.log(document.documentElement.style.getPropertyValue("--vh"));
+
   useEffect(() => {
     const debouncedHandleResize = debounce(function handleResize() {
       setDimensions({
@@ -25,6 +25,6 @@ export const AppWrapper = ({ children }) => {
       window.removeEventListener("resize", debouncedHandleResize);
     };
   });
-  console.log({ dimensions });
+
   return <div className="app-container"> {children} </div>;
 };

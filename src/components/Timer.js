@@ -2,6 +2,8 @@ import React from "react";
 import "./timer.css";
 import { vibrate } from "../utils/Vibration";
 import { noOp } from "../utils/NoOp";
+import { Howl } from "howler";
+import bell from "../assets/sounds/bell-hit-soft.wav";
 
 export const Timer = ({
   chosenTechnique,
@@ -13,14 +15,22 @@ export const Timer = ({
   pause,
   setPause,
   handlePause,
+  //handleStop,
   vibrations,
+  sounds,
 }) => {
+  // Setup the new Howl.
+  const sound = new Howl({
+    src: [bell],
+  });
+
   const changeOfStep = (modulo, array) => {
     for (let i = 0; i <= 3; i++) {
       const { duration, step } = array[i];
       if (modulo < duration) {
         if (modulo === 0) {
-          vibrations ? vibrate() : noOp;
+          sounds ? sound.play() : noOp();
+          vibrations ? vibrate() : noOp();
         }
         return { duration: duration - modulo, currentStep: step };
       } else {
@@ -51,7 +61,6 @@ export const Timer = ({
     }
   };
 
-  console.log(modFromSec, intervalId, seconds);
   return (
     <div className="container">
       <div className="area1"></div>

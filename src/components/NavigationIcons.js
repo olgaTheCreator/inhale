@@ -15,6 +15,8 @@ export const NavigationIcons = ({
   handleStop,
   vibrations,
   setVibrations,
+  sounds,
+  setSounds,
 }) => {
   const [techniquesAreOpen, setTechniquesOpen] = useState(false);
   const [timeIsOpen, setTimeOpen] = useState(false);
@@ -32,8 +34,16 @@ export const NavigationIcons = ({
         ></button>
         <p>vibrations</p>
       </div>
-      <div className="button2">
-        <button></button>
+      <div
+        className="button2"
+        onClick={() => {
+          if (sounds) setSounds(false);
+          else setSounds(true);
+        }}
+      >
+        <button
+          className={sounds ? "button2-sound" : "button2-nosound"}
+        ></button>
         <p>sound</p>
       </div>
       <div
