@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/inhale/static/css/main.850a7269.css",
+    "main.js": "/inhale/static/js/main.ad326a35.js",
+    "static/media/bell-hit-soft.wav": "/inhale/static/media/bell-hit-soft.fbe646fb74c7cea1354c.wav",
+    "static/media/Vector_sound_crossed_out_.svg": "/inhale/static/media/Vector_sound_crossed_out_.72f377a3e37e8119e775.svg",
+    "static/media/Vector_sound.svg": "/inhale/static/media/Vector_sound.dd0fd70528b4d55abf46.svg",
+    "static/media/Vector_vibrations_crossedout.svg": "/inhale/static/media/Vector_vibrations_crossedout.a84ab2d841c629340b26.svg",
+    "static/media/Vector_vibrations.svg": "/inhale/static/media/Vector_vibrations.9744b5478bb35e2f43b1.svg",
+    "static/media/Vector.svg": "/inhale/static/media/Vector.7c7841681effca6ad20e.svg",
+    "static/media/Vector_techniques.svg": "/inhale/static/media/Vector_techniques.a9bb5281d17a1889967e.svg",
+    "index.html": "/inhale/index.html",
+    "static/media/Vector_time.svg": "/inhale/static/media/Vector_time.0e8553552b85bcfe4d28.svg",
+    "static/media/Vector_ellipse_in_techniques.svg": "/inhale/static/media/Vector_ellipse_in_techniques.4c5b66a68ec0ac898d93.svg",
+    "static/media/Polygon3.svg": "/inhale/static/media/Polygon3.68a9649ae3ea4ec6d883.svg",
+    "main.850a7269.css.map": "/inhale/static/css/main.850a7269.css.map",
+    "main.ad326a35.js.map": "/inhale/static/js/main.ad326a35.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.850a7269.css",
+    "static/js/main.ad326a35.js"
+  ]
+}
