@@ -1,5 +1,11 @@
+root {
+  font-size: 62.5%;
+}
+
 body {
-  font-size: x-large;
+  font-size: 2rem;
+  font-family: "Metropolis";
+  font-weight: 600;
   text-align: center;
   margin: 0px;
   height: 100vh;
@@ -17,7 +23,7 @@ body {
   transform: translate(-50%, 0);
   width: 100%;
   max-width: 800px;
-  background: #8ea8a0;
+  background: linear-gradient(to top, #7f9790, #8ea8a0 50%, #bacac5);
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows:

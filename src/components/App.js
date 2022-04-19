@@ -8,6 +8,7 @@ import "../style.css";
 import { BeginSessionText } from "./BeginSessionText";
 import { EndOfSessionText } from "./EndOfSessionText";
 import { ShowingTechniqueNameOnScreen } from "./ShowingTechniqueNameOnScreen";
+import "@fontsource/metropolis";
 
 const App = () => {
   const [seconds, setSeconds] = useState(0);

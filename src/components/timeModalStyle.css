@@ -1,7 +1,6 @@
 .time-modal {
   width: 100%;
   height: calc(var(--vh, 1vh) * 50);
-  background: #8ea8a0;
   color: rgb(22, 22, 22);
   border-radius: 15px 15px 0px 0px;
   z-index: 10;
