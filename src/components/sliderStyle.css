@@ -19,8 +19,8 @@
   box-shadow: 0px calc(0.3 * var(--vh, vh)) calc(0.3 * var(--vh, vh))
     rgba(0, 0, 0, 0.25);
   border-radius: 999px;
-  width: calc(var(--vh, 1vh) * 1.7);
-  height: calc(var(--vh, 1vh) * 30);
+  width: 0.6em;
+  height: 8.5em;
   cursor: pointer;
   touch-action: none;
 }
@@ -29,8 +29,8 @@
   grid-area: 1/1;
   position: absolute;
   bottom: calc(var(--vh, 1vh) * 2.9);
-  width: calc(var(--vh, 1vh) * 1.7);
-  height: calc(var(--vh, 1vh) * 1.7);
+  width: 0.6em;
+  height: 0.6em;
   background: #8ea8a0;
   border: 5px solid #e8e1d4;
   box-shadow: 0px calc(0.3 * var(--vh, vh)) calc(0.3 * var(--vh, vh))

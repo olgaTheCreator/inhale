@@ -10,3 +10,10 @@ export const BeginSessionText = ({ durationOfSession }) => {
     </div>
   );
 };
+
+// const beginSessionStyles = {
+//   span: {
+//     color: "#455a6e",
+//     shadowColor: "transparent",
+//   },
+// };

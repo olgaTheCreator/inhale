@@ -1,7 +1,6 @@
 .time-modal {
   width: 100%;
-  height: calc(var(--vh, 1vh) * 50);
-  color: rgb(22, 22, 22);
+  /* height: calc(var(--vh, 1vh) * 50); */
   border-radius: 15px 15px 0px 0px;
   z-index: 10;
   display: grid;
@@ -38,6 +37,7 @@
   grid-row: 1 / 2;
   grid-column: 1/2;
   color: #e8e1d4;
+  font-size: 0.9em;
 }
 
 .buble-min {
@@ -47,6 +47,7 @@
   grid-row: 1 / 2;
   grid-column: 3/4;
   color: #e8e1d4;
+  font-size: 0.8em;
 }
 
 /*input[type="range"] {

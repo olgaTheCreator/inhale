@@ -1,9 +1,33 @@
 root {
   font-size: 62.5%;
 }
+html {
+  font-size: 1.8rem;
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 800px) {
+  html {
+    font-size: 1.9rem;
+  }
+}
+@media (min-width: 801px) and (max-width: 1200px) {
+  html {
+    font-size: 2.2rem;
+  }
+}
+@media (min-width: 1201px) {
+  html {
+    font-size: 2.5rem;
+  }
+}
 
 body {
-  font-size: 2rem;
   font-family: "Metropolis";
   font-weight: 600;
   text-align: center;
@@ -23,7 +47,8 @@ body {
   transform: translate(-50%, 0);
   width: 100%;
   max-width: 800px;
-  background: linear-gradient(to top, #7f9790, #8ea8a0 50%, #bacac5);
+  background: linear-gradient(0deg, #7f9790 10%, #8ea8a0 65%, #e8e1d4);
+  /*animation: gradient 3s infinite;*/
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows:
@@ -89,4 +114,16 @@ body {
   box-shadow: 0px calc(0.3 * var(--vh, vh)) calc(0.3 * var(--vh, vh))
     rgba(0, 0, 0, 0.25);
   width: 100%;
+}
+
+@keyframes gradient {
+  0% {
+    background: linear-gradient(0deg, #7f9790 10%, #8ea8a0 65%, #e8e1d4 100%);
+  }
+  50% {
+    background: linear-gradient(0deg, #7f9790 3%, #8ea8a0 6%, #e8e1d4 100%);
+  }
+  100% {
+    background: linear-gradient(0deg, #7f9790 10%, #8ea8a0 65%, #e8e1d4);
+  }
 }

@@ -18,6 +18,7 @@ export const TimeModal = ({
   );
   return (
     <div className="darkBG">
+      <div className="modal-name">duration</div>
       <div className="centered">
         <div className="time-modal" onMouseUp={() => setSliding(false)}>
           <div className="slider-parent">
@@ -53,7 +54,7 @@ export const TimeModal = ({
                 handleStop();
               }}
             >
-              SET DURATION
+              SET
             </button>
           </div>
         </div>

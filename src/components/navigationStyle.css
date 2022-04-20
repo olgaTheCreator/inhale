@@ -6,14 +6,14 @@
   justify-items: center;
 }
 .navContainer p {
-  font-size: small;
+  font-size: 0.45em;
 }
 .navContainer button {
   border-radius: 50%;
-  height: calc(6.6 * var(--vh, vh));
-  width: calc(6.6 * var(--vh, vh));
+  height: 2em;
+  width: 2em;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-  font-size: larger;
+  font-size: 0.9em;
   color: #455a6e;
 
   border: none;

@@ -1,23 +1,23 @@
 .modal {
   position: relative;
-  right: calc(2 * var(--vh, vh));
+  right: 0.7em;
   grid-column: 1/2;
   justify-self: end;
-  width: 50%;
+  width: 70%;
   height: 100%;
   background: #e8e1d4;
   color: #455a6e;
 
   border-radius: 30px 30px 30px 30px;
   z-index: 10;
-  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.04);
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr;
 }
 
 p.technique-name {
-  font-size: 18px;
+  font-size: 1em;
 }
 
 .list-of-techniques {
@@ -28,5 +28,6 @@ p.technique-name {
 li {
   background: url(../assets/icons/Vector_ellipse_in_techniques.svg) no-repeat
     left top;
+  background-size: 1.1em 1.1em;
   vertical-align: middle;
 }

@@ -1,5 +1,5 @@
 .darkBG {
-  background: linear-gradient(to top, #8ea8a0 55%, #bacac5);
+  background: linear-gradient(to top, #7f9790, #8ea8a0 60%, #e8e1d4);
   width: 100%;
   height: calc(var(--vh, 1vh) * 100);
   z-index: 0;
@@ -26,12 +26,12 @@
 }
 
 .modal-name {
-  padding-right: 60px;
-  padding-bottom: 20px;
+  padding-right: 0.7em;
+  padding-bottom: 0.7em;
   grid-row: 3/4;
   align-self: end;
   justify-self: end;
-  font-size: 2.5rem;
+  font-size: 1.8em;
   font-weight: 900;
   color: #faf8eb;
 
