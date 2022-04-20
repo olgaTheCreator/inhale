@@ -1,11 +1,18 @@
 .time-modal {
-  width: 100%;
   /* height: calc(var(--vh, 1vh) * 50); */
-  border-radius: 15px 15px 0px 0px;
+  position: relative;
+  grid-column: 1/2;
+  justify-self: end;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  color: #455a6e;
+
   z-index: 10;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.04);
   display: grid;
   grid-template-rows: 25% 25% 25% 25%;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 25% 20% 35% 20%;
   color: #455a6e;
 }
 .set-duration-button {
