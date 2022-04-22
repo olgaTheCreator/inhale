@@ -83,9 +83,7 @@ export const Timer = ({
               )}
             </div>
           ) : (
-            <div className="play-button">
-              <p>START</p>
-            </div>
+            <div className="play-button">{/* <p>START</p> */}</div>
           )}
           <br />
           <br />

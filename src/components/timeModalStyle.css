@@ -9,11 +9,18 @@
   color: #455a6e;
 
   z-index: 10;
-  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.04);
+
   display: grid;
   grid-template-rows: 25% 25% 25% 25%;
   grid-template-columns: 25% 20% 35% 20%;
   color: #455a6e;
+}
+
+.area-with-border {
+  grid-area: 1/2/5/5;
+  margin: 0 10% 8% 0;
+  border-radius: 30px;
+  box-shadow: 0 0 0 0.25em #e8e1d4;
 }
 .set-duration-button {
   grid-row: 4/5;
