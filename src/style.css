@@ -16,14 +16,7 @@ html {
   html {
     font-size: 1.8rem;
   }
-
-  .app-container {
-    background: url(./assets/icons/mountains.svg) no-repeat left bottom,
-      linear-gradient(0deg, #fff5e8 20%, #ffc87a 50%, #ffa422);
-    background-size: 0 calc(max(3rem, 100%)), auto;
-  }
 }
-
 @media (min-width: 401px) and (max-width: 670px) {
   html {
     font-size: 1.9rem;
@@ -56,10 +49,10 @@ body {
 
   width: 100%;
   max-width: 800px;
-  background: url(./assets/icons/layered-waves-haikei1.svg) no-repeat left
+  background: url(./assets/icons/layered-waves-haikei2.svg) no-repeat left
       bottom,
     linear-gradient(0deg, #fff5e8 15%, #ffc87a 50%, #ffa422);
-  background-size: calc(max(20em, 100%)), auto;
+  background-size: calc(max(17em, 100%)), auto;
   /* background-blend-mode: multiply;
   /*animation: gradient 3s infinite;*/
   display: grid;

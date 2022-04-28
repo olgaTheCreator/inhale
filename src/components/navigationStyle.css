@@ -5,13 +5,14 @@
   place-items: center;
 }
 .navContainer p {
-  font-size: 0.45em;
+  grid-row: 2/3;
+  font-size: 0.5em;
 }
 .navContainer button {
   border-radius: 50%;
   height: 2.5em;
   width: 2.5em;
-  box-shadow: 0 0 0.2em 0.1em rgba(134, 73, 160, 0.8);
+  box-shadow: 0 0 0.12em 0.15em rgba(52, 0, 0, 0.6);
   font-size: 0.9em;
 
   border: none;
