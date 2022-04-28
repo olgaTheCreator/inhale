@@ -14,19 +14,13 @@ export const TimeModal = ({
 }) => {
   const [isSliding, setSliding] = useState(false);
   const [thumbPos, setThumbPos] = useState(
-    durationToPosition(durationOfSession) + 20
+    durationToPosition(durationOfSession) + 6
   );
   return (
     <div className="darkBG">
       <div className="modal-name">duration</div>
       <div className="centered">
-        <div
-          className="time-modal"
-          onMouseUp={() => {
-            setSliding(false);
-          }}
-        >
-          <div className="area-with-border"></div>
+        <div className="time-modal" onMouseUp={() => setSliding(false)}>
           <div className="slider-parent">
             <div
               className="buble-number"
@@ -41,7 +35,6 @@ export const TimeModal = ({
               setSliding={setSliding}
               thumbPos={thumbPos}
               setThumbPos={setThumbPos}
-              positionToDuration={positionToDuration}
             />
 
             <div

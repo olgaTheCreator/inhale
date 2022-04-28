@@ -34,7 +34,7 @@ body {
   margin: 0px;
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
-  color: #340000;
+  color: #455a6e;
 }
 
 .external-container {
@@ -47,7 +47,7 @@ body {
   transform: translate(-50%, 0);
   width: 100%;
   max-width: 800px;
-  background: linear-gradient(0deg, #fff5e8 10%, #ffc87a 50%, #ffa422);
+  background: linear-gradient(0deg, #7f9790 10%, #8ea8a0 65%, #e8e1d4);
   /*animation: gradient 3s infinite;*/
   display: grid;
   grid-template-columns: 100%;
@@ -65,8 +65,9 @@ body {
 .upper-line {
   display: grid;
   align-self: end;
-  border-bottom: calc(0.8 * var(--vh, vh)) solid #ff6c01;
-  box-shadow: 0 0.1em 0.02em 0.05em rgba(255, 227, 188, 0.5);
+  border-bottom: calc(0.8 * var(--vh, vh)) solid #e8e1d4;
+  box-shadow: 0px calc(0.3 * var(--vh, vh)) calc(0.3 * var(--vh, vh))
+    rgba(0, 0, 0, 0.25);
   width: 100%;
   z-index: 11;
 }
@@ -109,8 +110,9 @@ body {
   display: grid;
   position: relative;
   align-self: start;
-  border-bottom: calc(0.8 * var(--vh, vh)) solid #ff6c01;
-  box-shadow: 0 0.1em 0.02 0.05em rgba(255, 227, 188, 0.5);
+  border-bottom: calc(0.8 * var(--vh, vh)) solid #e8e1d4;
+  box-shadow: 0px calc(0.3 * var(--vh, vh)) calc(0.3 * var(--vh, vh))
+    rgba(0, 0, 0, 0.25);
   width: 100%;
 }
 

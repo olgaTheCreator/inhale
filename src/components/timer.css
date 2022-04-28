@@ -27,12 +27,11 @@
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
-  width: 8.5em;
-  height: 8.5em;
+  width: 9em;
+  height: 9em;
   border: 0.6em solid #e8e1d4;
   background: #e8e1d4;
-  box-shadow: 0 0 0.2em 0.3em rgba(255, 164, 34, 0.8);
-
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
   grid-column: 2/ 4;
   grid-row: 2 / 4;
   display: grid;
@@ -50,36 +49,16 @@
 }
 
 .play-button {
-  /* background: url(../assets/icons/play_cienier.svg) no-repeat center center;
+  background: url(../assets/icons/play_cienier.svg) no-repeat center center;
   position: relative;
   left: 0.5em;
 
   background-size: contain;
-  width: 7em;
-  height: 7em;
+  width: 7.5em;
+  height: 7.5em;
   border: none;
   display: grid;
 
-  align-items: center; */
-  position: relative;
-  left: -35%;
-  border-radius: 50%;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  width: 6em;
-  height: 6em;
-  background: linear-gradient(
-    355deg,
-    hsl(359deg 82% 34%) 0%,
-    hsl(8deg 88% 39%) 29%,
-    hsl(17deg 94% 45%) 58%,
-    hsl(25deg 100% 50%) 100%
-  );
-  box-shadow: 0 0 0.1em 0.2em rgba(255, 209, 144, 1);
-  /*animation: gradient 3s infinite;*/
-  /* box-shadow: 0 0 0.2em 0.3em rgba(255, 164, 34, 0.8); */
-
-  text-align: center;
   align-items: center;
 }
 
