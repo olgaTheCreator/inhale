@@ -70,7 +70,6 @@ const App = () => {
           sounds={sounds}
         />
       </div>
-      <div className="free-space2"></div>
       <div className="menu-container">
         <NavigationIcons
           chosenTechnique={chosenTechnique}
@@ -89,7 +88,6 @@ const App = () => {
           setSounds={setSounds}
         />
       </div>
-      <div className="lower-line"></div>
     </AppWrapper>
   );
 };

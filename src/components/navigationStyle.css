@@ -2,19 +2,17 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  align-items: center;
-  justify-items: center;
+  place-items: center;
 }
 .navContainer p {
   font-size: 0.45em;
 }
 .navContainer button {
   border-radius: 50%;
-  height: 2em;
-  width: 2em;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  height: 2.5em;
+  width: 2.5em;
+  box-shadow: 0 0 0.2em 0.1em rgba(134, 73, 160, 0.8);
   font-size: 0.9em;
-  color: #455a6e;
 
   border: none;
 }
