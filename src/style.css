@@ -3,27 +3,35 @@ root {
 }
 html {
   font-size: 1.8rem;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 @media (max-width: 400px) {
   html {
     font-size: 1.8rem;
   }
+
+  .app-container {
+    background: url(./assets/icons/mountains.svg) no-repeat left bottom,
+      linear-gradient(0deg, #fff5e8 20%, #ffc87a 50%, #ffa422);
+    background-size: 0 calc(max(3rem, 100%)), auto;
+  }
 }
 
-@media (min-width: 401px) and (max-width: 800px) {
+@media (min-width: 401px) and (max-width: 670px) {
   html {
     font-size: 1.9rem;
   }
 }
-@media (min-width: 801px) and (max-width: 1200px) {
+@media (min-width: 671px) {
   html {
     font-size: 2.2rem;
-  }
-}
-@media (min-width: 1201px) {
-  html {
-    font-size: 2.5rem;
   }
 }
 
@@ -45,18 +53,27 @@ body {
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
+
   width: 100%;
   max-width: 800px;
-  background: linear-gradient(0deg, #fff5e8 10%, #ffc87a 50%, #ffa422);
+  background: url(./assets/icons/mountains.svg) no-repeat left bottom 10%,
+    linear-gradient(
+      0deg,
+      #6b3a80,
+      #8649a0 3%,
+      #8649a0 15%,
+      #fff5e8 15%,
+      #fff5e8 20%,
+      #ffc87a 50%,
+      #ffa422
+    );
+  background-size: calc(max(19rem, 100%)), auto;
+  /* background-blend-mode: multiply;
   /*animation: gradient 3s infinite;*/
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows:
-    [row]
-    calc(4 * var(--vh, vh)) calc(6 * var(--vh, vh)) calc(24 * var(--vh, vh))
-    calc(40 * var(--vh, vh))
-    calc(9 * var(--vh, vh)) calc(13 * var(--vh, vh)) calc(4 * var(--vh, vh));
-  grid-row-gap: 0px;
+  grid-template-rows: 1em auto auto 2fr 1fr;
+  grid-row-gap: 0.2em;
   height: calc(var(--vh, 1vh) * 100);
   padding: 0px;
   margin: 0;
@@ -93,25 +110,10 @@ body {
   display: grid;
 }
 
-.free-space2 {
+.menu-container {
   grid-row: 5 / 6;
   display: grid;
-}
-
-.menu-container {
-  grid-row: 6 / 7;
-  display: grid;
   padding-top: 2%;
-}
-
-.lower-line {
-  grid-row: 7 / 8;
-  display: grid;
-  position: relative;
-  align-self: start;
-  border-bottom: calc(0.8 * var(--vh, vh)) solid #ff6c01;
-  box-shadow: 0 0.1em 0.02 0.05em rgba(255, 227, 188, 0.5);
-  width: 100%;
 }
 
 @keyframes gradient {
