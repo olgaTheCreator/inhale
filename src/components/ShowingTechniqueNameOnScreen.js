@@ -5,7 +5,7 @@ export const ShowingTechniqueNameOnScreen = ({ chosenTechnique }) => {
   useEffect(() => {
     setTimeout(() => {
       setVisible(false);
-    }, 3000);
+    }, 5000);
     return () => setVisible(true);
   }, [chosenTechnique]);
 

@@ -2,18 +2,29 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  place-items: center;
+  align-items: end;
+  justify-items: center;
 }
+.navContainer div {
+  padding-bottom: 1.8rem;
+  font-size: 0.55rem;
+  color: rgba(52, 0, 0, 1);
+  transition: color 100ms ease-out, font-size 1s linear;
+}
+
+.navContainer div:hover {
+  color: #ff6c01;
+}
+
 .navContainer p {
   grid-row: 2/3;
-  font-size: 0.5em;
+  /* text-shadow: 0.15em 0.15em 0.06em rgba(255, 227, 188, 1); */
 }
 .navContainer button {
   border-radius: 50%;
-  height: 2.5em;
-  width: 2.5em;
+  height: 2.2rem;
+  width: 2.2rem;
   box-shadow: 0 0 0.12em 0.15em rgba(52, 0, 0, 0.6);
-  font-size: 0.9em;
 
   border: none;
 }

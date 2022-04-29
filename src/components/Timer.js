@@ -4,6 +4,7 @@ import { vibrate } from "../utils/Vibration";
 import { noOp } from "../utils/NoOp";
 import { Howl } from "howler";
 import bell from "../assets/sounds/bell-hit-soft.wav";
+import { ShowingTechniqueNameOnScreen } from "./ShowingTechniqueNameOnScreen";
 
 export const Timer = ({
   chosenTechnique,
@@ -70,10 +71,10 @@ export const Timer = ({
           <br />
           {intervalId ? (
             <div id="stop-button">
-              PAUSE
+              {/* PAUSE
               <br />
               {changeOfStep(modFromSec, inhaleExhale).duration}
-              <br />
+              <br /> */}
               {intervalId ? (
                 <div className="step-text">
                   {changeOfStep(modFromSec, inhaleExhale).currentStep}
@@ -83,10 +84,16 @@ export const Timer = ({
               )}
             </div>
           ) : (
-            <div className="play-button">{/* <p>START</p> */}</div>
+            <div></div>
           )}
           <br />
           <br />
+        </div>
+        <div className="play-button-container">
+          <div className="play-button">
+            {" "}
+            <ShowingTechniqueNameOnScreen chosenTechnique={chosenTechnique} />
+          </div>
         </div>
       </div>
       <div className="area3"></div>

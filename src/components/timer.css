@@ -24,6 +24,7 @@
 }
 
 .circle {
+  position: relative;
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -38,6 +39,7 @@
   display: grid;
   text-align: center;
   place-items: center;
+  z-index: 2;
 }
 
 .step-text {
@@ -48,21 +50,20 @@
 #stop-button {
   position: relative;
 }
-
-.play-button {
-  /* background: url(../assets/icons/play_cienier.svg) no-repeat center center;
-  position: relative;
-  left: 0.5em;
-
-  background-size: contain;
-  width: 7em;
-  height: 7em;
-  border: none;
-  display: grid;
-
-  align-items: center; */
+.play-button-container {
+  grid-column: 2/ 4;
+  grid-row: 2 / 4;
   position: relative;
   left: -35%;
+  animation: xAxis 5s infinite ease-in, zindex 5s infinite linear;
+  z-index: 2;
+}
+.play-button {
+  position: relative;
+  z-index: auto;
+  display: grid;
+  place-content: center;
+
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -76,23 +77,66 @@
     hsl(25deg 100% 50%) 100%
   );
   box-shadow: 0 0 0.1em 0.2em rgba(255, 209, 144, 1);
+  animation: yAxis 5s infinite ease-out, scale 5s infinite ease-out;
   /*animation: gradient 3s infinite;*/
   /* box-shadow: 0 0 0.2em 0.3em rgba(255, 164, 34, 0.8); */
-
-  text-align: center;
-  align-items: center;
 }
-
-.play-button p {
-  position: relative;
-
+.play-button div {
   /* font-family: Montserrat;
   font-style: normal;
   font-weight: 600;
   font-size: 20.8772px; */
-  left: 0.5em;
-  text-align: left;
-  color: #faf8eb;
-  font-size: 1.6em;
+  color: rgba(255, 209, 144, 1);
+  font-size: 1.4rem;
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
 }
+
+@keyframes xAxis {
+  50% {
+    animation-timing-function: ease-in;
+    transform: translateX(240px);
+  }
+  /* 90% {
+    animation-timing-function: ease-in;
+    transform: translateX(-50px);
+  } */
+
+  /* 53% {
+    animation-timing-function: ease-in;
+    transform: scale(0.5, 0.5);
+  }*/
+}
+
+@keyframes yAxis {
+  50% {
+    animation-timing-function: ease-out;
+    transform: translateY(150px);
+  }
+  /* 90% {
+    animation-timing-function: ease-out;
+    transform: translateY(-100px);
+  } */
+}
+@keyframes scale {
+  65% {
+    animation-timing-function: ease-out;
+    transform: scale(0.6, 0.6);
+  }
+}
+
+@keyframes zindex {
+  0% {
+    z-index: 10;
+  }
+  36% {
+    z-index: 0;
+  }
+}
+/* 53% {
+    animation-timing-function: ease-out;
+    
+  }
+  66% {
+    animation-timing-function: ease-out;
+    z-index: 1;
+  } */

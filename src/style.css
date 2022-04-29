@@ -49,15 +49,14 @@ body {
 
   width: 100%;
   max-width: 800px;
-  background: url(./assets/icons/layered-waves-haikei2.svg) no-repeat left
-      bottom,
-    linear-gradient(0deg, #fff5e8 15%, #ffc87a 50%, #ffa422);
-  background-size: calc(max(17em, 100%)), auto;
+  /* background: url(./assets/icons/mountains1.svg) no-repeat left bottom, */
+  background: linear-gradient(0deg, #fff5e8 15%, #ffc87a 50%, #ffa422);
+  /* background-size: calc(max(130%, 19em)), auto; */
   /* background-blend-mode: multiply;
   /*animation: gradient 3s infinite;*/
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 1em auto auto 2fr 1fr;
+  grid-template-rows: 1em 2em 3em 2fr 2fr;
   row-gap: 0.2em;
   height: calc(var(--vh, 1vh) * 100);
   padding: 0px;
@@ -98,6 +97,8 @@ body {
 .menu-container {
   grid-row: 5 / 6;
   display: grid;
+  background: url(./assets/icons/mountains2.svg) no-repeat left top;
+  background-size: 145%;
 }
 
 @keyframes gradient {

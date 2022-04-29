@@ -7,7 +7,6 @@ import { MenuIcon } from "./MenuIcon";
 import "../style.css";
 import { BeginSessionText } from "./BeginSessionText";
 import { EndOfSessionText } from "./EndOfSessionText";
-import { ShowingTechniqueNameOnScreen } from "./ShowingTechniqueNameOnScreen";
 import "@fontsource/metropolis";
 
 const App = () => {
@@ -44,8 +43,6 @@ const App = () => {
         <MenuIcon />
       </div>
       <div className="free-space1">
-        <ShowingTechniqueNameOnScreen chosenTechnique={chosenTechnique} />
-
         {durationOfSession * 60 === seconds ? (
           <EndOfSessionText />
         ) : intervalId || pause ? (
