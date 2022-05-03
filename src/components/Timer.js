@@ -66,7 +66,7 @@ export const Timer = ({
     <div className="container">
       <div className="area1"></div>
       <div className="area2">
-        <div className="circle" onClick={handleStart}>
+        <div className="sun1" onClick={handleStart}>
           <br />
           <br />
           {intervalId ? (
@@ -89,10 +89,12 @@ export const Timer = ({
           <br />
           <br />
         </div>
-        <div className="play-button-container">
-          <div className="play-button">
-            {" "}
-            <ShowingTechniqueNameOnScreen chosenTechnique={chosenTechnique} />
+        <div className="orbit">
+          <div className="sun2-wrapper">
+            <div className="sun2">
+              {" "}
+              <ShowingTechniqueNameOnScreen chosenTechnique={chosenTechnique} />
+            </div>
           </div>
         </div>
       </div>
