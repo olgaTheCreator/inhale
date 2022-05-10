@@ -7,9 +7,5 @@
   font-style: normal; */
   text-align: center;
 
-  color: #340000;
-
-  text-shadow: 0.05em 0.05em 0 rgba(255, 227, 188, 1),
-    0.06em 0.06em 0 rgba(255, 227, 188, 1),
-    0.07em 0.07em 0 rgba(255, 227, 188, 1);
+  color: hsla(213, 30%, 71%, 0.8);
 }

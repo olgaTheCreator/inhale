@@ -31,11 +31,10 @@
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
-  width: 8rem;
-  height: 8rem;
-  border: 0.6rem solid #e8e1d4;
-  background: #e8e1d4;
-  box-shadow: 0 0 0.2em 0.3em rgba(255, 164, 34, 0.8);
+  width: 7.5rem;
+  height: 7.5rem;
+  background: #2e363b;
+  box-shadow: 5px 5px 30px 7px #12191f, -5px -5px 30px 7px #96acc7;
 
   grid-column: 2/ 4;
   grid-row: 2 / 4;
@@ -44,6 +43,22 @@
   place-items: center;
   transform-style: preserve-3d;
   transform: rotateX(-75deg);
+}
+
+.sun3 {
+  position: relative;
+  display: grid;
+  place-items: center;
+  color: hsla(213, 30%, 71%, 0.8);
+
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  width: 6.4rem;
+  height: 6.4rem;
+  background: #23292d;
+  box-shadow: inset 0px -2px 4px rgba(255, 255, 255, 0.25),
+    inset 5px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .step-text {
@@ -58,10 +73,10 @@
   grid-column: 2/ 4;
   grid-row: 2 / 4;
   position: absolute;
-  border: 1px solid rgba(255, 255, 255, 1);
+  /* border: 1px solid rgba(255, 255, 255, 1); */
   border-radius: 50%;
-  width: 12.2rem;
-  height: 12.2rem;
+  width: 9.5rem;
+  height: 9.5rem;
   display: grid;
   place-items: center;
   animation-name: orbit;
@@ -76,8 +91,8 @@
   position: relative;
   left: -50%;
   top: 20%;
-  width: 6rem;
-  height: 6rem;
+  width: 3rem;
+  height: 3rem;
   display: grid;
   place-items: center;
   transform-style: preserve-3d;
@@ -95,21 +110,16 @@
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
-  width: 5em;
-  height: 5em;
-  background: linear-gradient(
-    355deg,
-    hsl(359deg 82% 34%) 0%,
-    hsl(8deg 88% 39%) 29%,
-    hsl(17deg 94% 45%) 58%,
-    hsl(25deg 100% 50%) 100%
-  );
-  box-shadow: 0 0 0.1em 0.2em rgba(255, 209, 144, 1);
+  width: 2.5em;
+  height: 2.5em;
+  background: linear-gradient(270deg, #083251, #2a4764 14.48%, #f9f9f9 100%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 5px 5px 15px #2b2c2d;
   transform-style: preserve-3d;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-name: scale;
   animation-duration: 6s;
+  transform: rotate(90deg);
   /* animation: yAxis 5s infinite ease-out, scale 5s infinite ease-out; */
 }
 .sun2 div {
@@ -117,9 +127,8 @@
   font-style: normal;
   font-weight: 600;
   font-size: 20.8772px; */
-  color: rgba(255, 209, 144, 1);
-  font-size: 1.4rem;
-  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  color: hsla(203, 12%, 16%, 1);
+  font-size: 1rem;
 }
 
 @keyframes xAxis {

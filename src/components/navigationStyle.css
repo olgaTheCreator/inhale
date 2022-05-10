@@ -6,6 +6,7 @@
   justify-items: center;
 }
 .navContainer div {
+  display: none;
   padding-bottom: 1.8rem;
   font-size: 0.55rem;
   color: rgba(52, 0, 0, 1);
@@ -17,6 +18,7 @@
 }
 
 .navContainer p {
+  display: none;
   grid-row: 2/3;
   /* text-shadow: 0.15em 0.15em 0.06em rgba(255, 227, 188, 1); */
 }

@@ -67,27 +67,29 @@ export const Timer = ({
       <div className="area1"></div>
       <div className="area2">
         <div className="sun1" onClick={handleStart}>
-          <br />
-          <br />
-          {intervalId ? (
-            <div id="stop-button">
-              {/* PAUSE
+          <div className="sun3">
+            <br />
+            <br />
+            {intervalId ? (
+              <div id="stop-button">
+                {/* PAUSE
               <br />
               {changeOfStep(modFromSec, inhaleExhale).duration}
               <br /> */}
-              {intervalId ? (
-                <div className="step-text">
-                  {changeOfStep(modFromSec, inhaleExhale).currentStep}
-                </div>
-              ) : (
-                <div></div>
-              )}
-            </div>
-          ) : (
-            <div></div>
-          )}
-          <br />
-          <br />
+                {intervalId ? (
+                  <div className="step-text">
+                    {changeOfStep(modFromSec, inhaleExhale).currentStep}
+                  </div>
+                ) : (
+                  <div></div>
+                )}
+              </div>
+            ) : (
+              <div></div>
+            )}
+            <br />
+            <br />
+          </div>
         </div>
         <div className="orbit">
           <div className="sun2-wrapper">

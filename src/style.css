@@ -50,10 +50,8 @@ body {
   width: 100%;
   max-width: 800px;
   /* background: url(./assets/icons/mountains1.svg) no-repeat left bottom, */
-  background: linear-gradient(0deg, #fff5e8 15%, #ffc87a 50%, #ffa422);
-  /* background-size: calc(max(130%, 19em)), auto; */
-  /* background-blend-mode: multiply;
-  /*animation: gradient 3s infinite;*/
+  background: hsla(204, 13%, 21%, 1);
+
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 1em 2em 3em 2fr 2fr;
@@ -63,14 +61,6 @@ body {
   margin: 0;
 }
 
-.upper-line {
-  display: grid;
-  align-self: end;
-  border-bottom: calc(0.8 * var(--vh, vh)) solid #ff6c01;
-  box-shadow: 0 0.1em 0.01em 0.03em rgba(255, 227, 188, 0.5);
-  width: 100%;
-  z-index: 11;
-}
 .upper-line-draw {
   border-bottom: calc(0.35 * var(--vh, vh)) solid #e8e1d4;
   width: 100%;
@@ -97,7 +87,7 @@ body {
 .menu-container {
   grid-row: 5 / 6;
   display: grid;
-  background: url(./assets/icons/mountains2.svg) no-repeat left top;
+  background: url(./assets/icons/gory.svg) no-repeat left top;
   background-size: cover;
 }
 
