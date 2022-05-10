@@ -1,8 +1,11 @@
 {
   "files": {
-    "main.css": "/inhale/static/css/main.850a7269.css",
-    "main.js": "/inhale/static/js/main.ad326a35.js",
+    "main.css": "/inhale/static/css/main.0a50e15e.css",
+    "main.js": "/inhale/static/js/main.76cb3ab2.js",
     "static/media/bell-hit-soft.wav": "/inhale/static/media/bell-hit-soft.fbe646fb74c7cea1354c.wav",
+    "static/media/gory.svg": "/inhale/static/media/gory.cde8060f52bcb0a34b3e.svg",
+    "static/media/metropolis-all-400-normal.woff": "/inhale/static/media/metropolis-all-400-normal.d6363f8209002f967c3d.woff",
+    "static/media/metropolis-all-400-normal.woff2": "/inhale/static/media/metropolis-all-400-normal.c7106e4ab743a4136ded.woff2",
     "static/media/Vector_sound_crossed_out_.svg": "/inhale/static/media/Vector_sound_crossed_out_.72f377a3e37e8119e775.svg",
     "static/media/Vector_sound.svg": "/inhale/static/media/Vector_sound.dd0fd70528b4d55abf46.svg",
     "static/media/Vector_vibrations_crossedout.svg": "/inhale/static/media/Vector_vibrations_crossedout.a84ab2d841c629340b26.svg",
@@ -12,12 +15,11 @@
     "index.html": "/inhale/index.html",
     "static/media/Vector_time.svg": "/inhale/static/media/Vector_time.0e8553552b85bcfe4d28.svg",
     "static/media/Vector_ellipse_in_techniques.svg": "/inhale/static/media/Vector_ellipse_in_techniques.4c5b66a68ec0ac898d93.svg",
-    "static/media/Polygon3.svg": "/inhale/static/media/Polygon3.68a9649ae3ea4ec6d883.svg",
-    "main.850a7269.css.map": "/inhale/static/css/main.850a7269.css.map",
-    "main.ad326a35.js.map": "/inhale/static/js/main.ad326a35.js.map"
+    "main.0a50e15e.css.map": "/inhale/static/css/main.0a50e15e.css.map",
+    "main.76cb3ab2.js.map": "/inhale/static/js/main.76cb3ab2.js.map"
   },
   "entrypoints": [
-    "static/css/main.850a7269.css",
-    "static/js/main.ad326a35.js"
+    "static/css/main.0a50e15e.css",
+    "static/js/main.76cb3ab2.js"
   ]
 }
